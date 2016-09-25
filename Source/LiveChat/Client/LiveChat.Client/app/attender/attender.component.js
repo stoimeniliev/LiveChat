@@ -9,17 +9,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
+var AttenderComponent = (function () {
+    function AttenderComponent() {
     }
-    AppComponent = __decorate([
+    AttenderComponent = __decorate([
         core_1.Component({
-            selector: 'my-app',
-            template: '<h1>My First Editted Angular App</h1>'
+            selector: 'lc-organizer',
+            template: '<h2>Wellcome to the organizer view</h2>'
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], AttenderComponent);
+    return AttenderComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.AttenderComponent = AttenderComponent;
+//# sourceMappingURL=attender.component.js.map

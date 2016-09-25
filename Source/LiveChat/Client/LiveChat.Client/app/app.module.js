@@ -8,17 +8,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+// The root of the app from a developer stand point.
+// Every service and other global dependency is registered here.
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
-var app_component_1 = require('./app.component');
+var app_routing_1 = require('./app.routing');
+var home_component_1 = require('./home/home.component');
+var organizer_component_1 = require("./organizer/organizer.component");
+var attender_component_1 = require("./attender/attender.component");
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule],
-            declarations: [app_component_1.AppComponent],
-            bootstrap: [app_component_1.AppComponent]
+            imports: [platform_browser_1.BrowserModule, app_routing_1.routing],
+            declarations: [home_component_1.HomeComponent, organizer_component_1.OrganizerComponent, attender_component_1.AttenderComponent],
+            providers: [app_routing_1.appRoutingProviders],
+            bootstrap: [home_component_1.HomeComponent]
         }), 
         __metadata('design:paramtypes', [])
     ], AppModule);
