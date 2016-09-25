@@ -15,7 +15,7 @@ var OrganizerComponent = (function () {
     OrganizerComponent = __decorate([
         core_1.Component({
             selector: 'lc-attender',
-            template: '<h2>Wellcome to the attender view</h2>'
+            template: '<h2>Wellcome to the organizer view</h2>'
         }), 
         __metadata('design:paramtypes', [])
     ], OrganizerComponent);

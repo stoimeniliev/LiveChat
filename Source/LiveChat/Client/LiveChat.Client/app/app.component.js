@@ -8,18 +8,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+// The root of the app from the stand point of the user. This points to the html tag that is placed in the initial index.html.
+// In this case lc-app (lc - live chat).
 var core_1 = require('@angular/core');
-var AttenderComponent = (function () {
-    function AttenderComponent() {
+var AppComponent = (function () {
+    function AppComponent() {
     }
-    AttenderComponent = __decorate([
+    AppComponent = __decorate([
         core_1.Component({
-            selector: 'lc-organizer',
-            template: '<h2>Wellcome to the attender view</h2>'
+            selector: 'lc-app',
+            templateUrl: './app/app.component.html'
         }), 
         __metadata('design:paramtypes', [])
-    ], AttenderComponent);
-    return AttenderComponent;
+    ], AppComponent);
+    return AppComponent;
 }());
-exports.AttenderComponent = AttenderComponent;
-//# sourceMappingURL=attender.component.js.map
+exports.AppComponent = AppComponent;
+//# sourceMappingURL=app.component.js.map

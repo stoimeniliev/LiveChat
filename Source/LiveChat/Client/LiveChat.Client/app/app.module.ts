@@ -4,15 +4,16 @@ import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { routing, appRoutingProviders } from './app.routing';
+import { AppComponent } from "./app.component";
 import { HomeComponent } from './home/home.component';
 import { OrganizerComponent } from "./organizer/organizer.component";
 import { AttenderComponent } from "./attender/attender.component";
 
 @NgModule( {
 	imports: [ BrowserModule, routing ],
-	declarations: [ HomeComponent, OrganizerComponent, AttenderComponent ],
+	declarations: [ AppComponent, HomeComponent, OrganizerComponent, AttenderComponent ],
 	providers: [ appRoutingProviders ],
-	bootstrap: [ HomeComponent ]
+	bootstrap: [ AppComponent ]
 })
 
 export class AppModule { }

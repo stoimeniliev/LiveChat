@@ -8,15 +8,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-// The root of the app from the stand point of the user. This points to the html tag that is placed in the initial index.html.
-// In this case lc-app (lc - live chat).
 var core_1 = require('@angular/core');
 var HomeComponent = (function () {
     function HomeComponent() {
     }
     HomeComponent = __decorate([
         core_1.Component({
-            selector: 'lc-app',
+            selector: 'lc-home',
             templateUrl: './app/home/home.component.html'
         }), 
         __metadata('design:paramtypes', [])
