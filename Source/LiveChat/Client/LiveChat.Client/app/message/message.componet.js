@@ -11,8 +11,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var MessageComponent = (function () {
     function MessageComponent() {
+        this.author = '';
+        this.content = '';
+        this.message = '';
     }
     MessageComponent.prototype.ngOnInit = function () { };
+    MessageComponent.prototype.submitMessage = function () {
+        this.message = this.author + " says " + this.content;
+    };
     MessageComponent = __decorate([
         core_1.Component({
             moduleId: module.id,

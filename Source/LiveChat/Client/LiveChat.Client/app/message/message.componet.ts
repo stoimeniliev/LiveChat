@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component( {
 	moduleId: module.id,
@@ -20,6 +20,19 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class MessageComponent implements OnInit {
+	author: string;
+	content: string;
+	message: string;
+	constructor() {
+		this.author = '';
+		this.content = '';
+		this.message = '';
+	}
+
 	ngOnInit() { }
+
+	submitMessage() {
+		this.message = `${this.author} says ${this.content}`
+	}
 }
 

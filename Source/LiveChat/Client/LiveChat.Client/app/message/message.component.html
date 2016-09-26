@@ -1,5 +1,6 @@
 <label>Author:</label>
-<input type="text">
+<input type="text" [(ngModel)]="author">
 <label>Message:</label>
-<textarea></textarea>
-<button>Submit</button>
+<textarea [(ngModel)]="content"></textarea>
+<button (click)="submitMessage()">Submit</button>
+<p>{{message}}</p>
