@@ -14,8 +14,9 @@ var HomeComponent = (function () {
     }
     HomeComponent = __decorate([
         core_1.Component({
+            moduleId: module.id,
             selector: 'lc-home',
-            templateUrl: './app/home/home.component.html'
+            templateUrl: 'home.component.html'
         }), 
         __metadata('design:paramtypes', [])
     ], HomeComponent);

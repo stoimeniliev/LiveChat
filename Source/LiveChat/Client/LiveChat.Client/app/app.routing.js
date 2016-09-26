@@ -1,6 +1,6 @@
 "use strict";
 var router_1 = require('@angular/router');
-var home_component_1 = require("./home/home.component");
+var home_component_1 = require('./home/home.component');
 var organizer_component_1 = require('./organizer/organizer.component');
 var attender_component_1 = require('./attender/attender.component');
 var appRoutes = [

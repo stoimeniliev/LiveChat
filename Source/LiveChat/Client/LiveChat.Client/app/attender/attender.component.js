@@ -14,6 +14,7 @@ var AttenderComponent = (function () {
     }
     AttenderComponent = __decorate([
         core_1.Component({
+            moduleId: module.id,
             selector: 'lc-organizer',
             template: '<h2>Wellcome to the attender view</h2>'
         }), 

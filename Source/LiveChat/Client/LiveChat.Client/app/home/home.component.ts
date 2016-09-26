@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 
 @Component( {
+	moduleId: module.id,
 	selector: 'lc-home',
-	templateUrl: './app/home/home.component.html'
+	templateUrl: 'home.component.html'
 })
 
 export class HomeComponent {
 
 }
+
