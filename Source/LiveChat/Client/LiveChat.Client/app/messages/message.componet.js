@@ -14,13 +14,11 @@ var MessageComponent = (function () {
     function MessageComponent() {
         this.author = '';
         this.content = '';
-        // this.message = '';
     }
     MessageComponent.prototype.ngOnInit = function () { };
     MessageComponent.prototype.submitMessage = function () {
-        // this.message = `${ this.author } says ${ this.content }`
         this.message = new message_1.Message(this.author, this.content);
-        console.log(this.message.sayMessage());
+        console.log(this.message.getMessage());
     };
     MessageComponent = __decorate([
         core_1.Component({

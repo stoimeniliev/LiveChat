@@ -7,7 +7,7 @@ export class Message {
 		this.content = content;
 	}
 
-	sayMessage(){
+	getMessage(){
 		return `${this.author}: ${this.content}`;
 	}
 }

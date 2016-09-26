@@ -27,15 +27,13 @@ export class MessageComponent implements OnInit {
 	constructor() {
 		this.author = '';
 		this.content = '';
-		// this.message = '';
 	}
 
 	ngOnInit() { }
 
 	submitMessage() {
-		// this.message = `${ this.author } says ${ this.content }`
 		this.message = new Message( this.author, this.content );
-		console.log(this.message.sayMessage());
+		console.log(this.message.getMessage());
 	}
 }
 
