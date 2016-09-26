@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Message } from './message'
 
 @Component( {
 	moduleId: module.id,
@@ -22,17 +23,19 @@ import { Component, OnInit, Input } from '@angular/core';
 export class MessageComponent implements OnInit {
 	author: string;
 	content: string;
-	message: string;
+	message: Message;
 	constructor() {
 		this.author = '';
 		this.content = '';
-		this.message = '';
+		// this.message = '';
 	}
 
 	ngOnInit() { }
 
 	submitMessage() {
-		this.message = `${this.author} says ${this.content}`
+		// this.message = `${ this.author } says ${ this.content }`
+		this.message = new Message( this.author, this.content );
+		console.log(this.message.sayMessage());
 	}
 }
 

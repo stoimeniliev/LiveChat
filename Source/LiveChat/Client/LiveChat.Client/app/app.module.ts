@@ -9,7 +9,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { OrganizerComponent } from './organizer/organizer.component';
 import { AttenderComponent } from './attender/attender.component';
-import { MessageComponent } from './message/message.componet';
+import { MessageComponent } from './messages/message.componet';
 
 @NgModule( {
 	imports: [ BrowserModule, FormsModule, routing ],

@@ -18,7 +18,7 @@ var app_component_1 = require('./app.component');
 var home_component_1 = require('./home/home.component');
 var organizer_component_1 = require('./organizer/organizer.component');
 var attender_component_1 = require('./attender/attender.component');
-var message_componet_1 = require('./message/message.componet');
+var message_componet_1 = require('./messages/message.componet');
 var AppModule = (function () {
     function AppModule() {
     }

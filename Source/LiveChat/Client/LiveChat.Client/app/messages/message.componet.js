@@ -9,15 +9,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var message_1 = require('./message');
 var MessageComponent = (function () {
     function MessageComponent() {
         this.author = '';
         this.content = '';
-        this.message = '';
+        // this.message = '';
     }
     MessageComponent.prototype.ngOnInit = function () { };
     MessageComponent.prototype.submitMessage = function () {
-        this.message = this.author + " says " + this.content;
+        // this.message = `${ this.author } says ${ this.content }`
+        this.message = new message_1.Message(this.author, this.content);
+        console.log(this.message.sayMessage());
     };
     MessageComponent = __decorate([
         core_1.Component({
