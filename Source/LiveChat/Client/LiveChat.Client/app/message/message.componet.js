@@ -12,14 +12,17 @@ var core_1 = require('@angular/core');
 var MessageComponent = (function () {
     function MessageComponent() {
     }
-    MessageComponent.prototype.ngOnInit = function () {
-        console.log('This is a message!');
-    };
+    MessageComponent.prototype.ngOnInit = function () { };
     MessageComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
             selector: 'lc-message',
-            templateUrl: 'message.component.html'
+            templateUrl: 'message.component.html',
+            styles: [
+                "label {\n\t\t\tdisplay: inline;\n\t\t\tfont-weight: bold;\n\t\t}",
+                "label:before, label:after {\n\t\t\tcontent: \"\\A\";\n\t\t\twhite-space: pre;\n\t\t}",
+                "button {\n\t\t\tdisplay: block;\n\t\t}"
+            ]
         }), 
         __metadata('design:paramtypes', [])
     ], MessageComponent);
