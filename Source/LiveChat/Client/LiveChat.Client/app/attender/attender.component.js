@@ -16,7 +16,7 @@ var AttenderComponent = (function () {
         core_1.Component({
             moduleId: module.id,
             selector: 'lc-organizer',
-            template: '<h2>Wellcome to the attender view</h2>'
+            templateUrl: 'attender.component.html'
         }), 
         __metadata('design:paramtypes', [])
     ], AttenderComponent);

@@ -17,13 +17,20 @@ var app_component_1 = require('./app.component');
 var home_component_1 = require('./home/home.component');
 var organizer_component_1 = require('./organizer/organizer.component');
 var attender_component_1 = require('./attender/attender.component');
+var message_componet_1 = require('./message/message.componet');
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
             imports: [platform_browser_1.BrowserModule, app_routing_1.routing],
-            declarations: [app_component_1.AppComponent, home_component_1.HomeComponent, organizer_component_1.OrganizerComponent, attender_component_1.AttenderComponent],
+            declarations: [
+                app_component_1.AppComponent,
+                home_component_1.HomeComponent,
+                organizer_component_1.OrganizerComponent,
+                attender_component_1.AttenderComponent,
+                message_componet_1.MessageComponent
+            ],
             providers: [app_routing_1.appRoutingProviders],
             bootstrap: [app_component_1.AppComponent]
         }), 

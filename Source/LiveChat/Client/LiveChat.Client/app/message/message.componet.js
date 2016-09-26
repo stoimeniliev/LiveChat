@@ -9,18 +9,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var OrganizerComponent = (function () {
-    function OrganizerComponent() {
+var MessageComponent = (function () {
+    function MessageComponent() {
     }
-    OrganizerComponent = __decorate([
+    MessageComponent.prototype.ngOnInit = function () {
+        console.log('This is a message!');
+    };
+    MessageComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
-            selector: 'lc-attender',
-            templateUrl: 'organizer.component.html'
+            selector: 'lc-message',
+            templateUrl: 'message.component.html'
         }), 
         __metadata('design:paramtypes', [])
-    ], OrganizerComponent);
-    return OrganizerComponent;
+    ], MessageComponent);
+    return MessageComponent;
 }());
-exports.OrganizerComponent = OrganizerComponent;
-//# sourceMappingURL=organizer.component.js.map
+exports.MessageComponent = MessageComponent;
+//# sourceMappingURL=message.componet.js.map

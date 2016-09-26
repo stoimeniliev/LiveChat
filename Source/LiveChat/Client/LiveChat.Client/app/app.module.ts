@@ -8,10 +8,17 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { OrganizerComponent } from './organizer/organizer.component';
 import { AttenderComponent } from './attender/attender.component';
+import { MessageComponent } from './message/message.componet';
 
 @NgModule( {
 	imports: [ BrowserModule, routing ],
-	declarations: [ AppComponent, HomeComponent, OrganizerComponent, AttenderComponent ],
+	declarations: [
+		AppComponent,
+		HomeComponent,
+		OrganizerComponent,
+		AttenderComponent,
+		MessageComponent
+	],
 	providers: [ appRoutingProviders ],
 	bootstrap: [ AppComponent ]
 })
