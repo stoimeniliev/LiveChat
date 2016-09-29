@@ -2,7 +2,7 @@
 // Every service and other global dependency is registered here.
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule} from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 import { routing, appRoutingProviders } from './app.routing';
 import { AppComponent } from './app.component';
@@ -12,7 +12,11 @@ import { AttenderComponent } from './attender/attender.component';
 import { MessageComponent } from './messages/message.componet';
 
 @NgModule( {
-	imports: [ BrowserModule, FormsModule, routing ],
+	imports: [
+		BrowserModule, // Make the app runnable in the browser
+		FormsModule, // NgModel
+		routing
+	],
 	declarations: [
 		AppComponent,
 		HomeComponent,

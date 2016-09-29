@@ -12,13 +12,12 @@ var core_1 = require('@angular/core');
 var message_1 = require('./message');
 var MessageComponent = (function () {
     function MessageComponent() {
-        this.author = '';
-        this.content = '';
+        this.saidMessage = '';
     }
     MessageComponent.prototype.ngOnInit = function () { };
-    MessageComponent.prototype.submitMessage = function () {
-        this.message = new message_1.Message(this.author, this.content);
-        console.log(this.message.getMessage());
+    MessageComponent.prototype.submitMessage = function (author, content) {
+        this.message = new message_1.Message(author.value, content.value);
+        this.saidMessage = this.message.getMessage();
     };
     MessageComponent = __decorate([
         core_1.Component({

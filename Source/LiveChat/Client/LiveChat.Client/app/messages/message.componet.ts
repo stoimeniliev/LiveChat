@@ -21,19 +21,17 @@ import { Message } from './message'
 })
 
 export class MessageComponent implements OnInit {
-	author: string;
-	content: string;
 	message: Message;
+	saidMessage: string;
 	constructor() {
-		this.author = '';
-		this.content = '';
+		this.saidMessage = '';
 	}
 
 	ngOnInit() { }
 
-	submitMessage() {
-		this.message = new Message( this.author, this.content );
-		console.log(this.message.getMessage());
+	submitMessage(author: HTMLInputElement, content: HTMLInputElement) {
+		this.message = new Message( author.value, content.value );
+		this.saidMessage = this.message.getMessage();
 	}
 }
 
