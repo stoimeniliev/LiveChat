@@ -18,7 +18,9 @@ var app_component_1 = require('./app.component');
 var home_component_1 = require('./home/home.component');
 var organizer_component_1 = require('./organizer/organizer.component');
 var attender_component_1 = require('./attender/attender.component');
-var message_componet_1 = require('./messages/message.componet');
+var messages_list_component_1 = require('./messages/messages-list/messages-list.component');
+var message_input_componet_1 = require('./messages/message-input/message-input.componet');
+var message_component_1 = require('./messages/message/message.component');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -34,7 +36,9 @@ var AppModule = (function () {
                 home_component_1.HomeComponent,
                 organizer_component_1.OrganizerComponent,
                 attender_component_1.AttenderComponent,
-                message_componet_1.MessageComponent
+                message_input_componet_1.MessageInputComponent,
+                messages_list_component_1.MessagesListComponent,
+                message_component_1.MessageComponent
             ],
             providers: [app_routing_1.appRoutingProviders],
             bootstrap: [app_component_1.AppComponent]

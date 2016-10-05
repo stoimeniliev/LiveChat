@@ -12,22 +12,19 @@ var core_1 = require('@angular/core');
 var message_1 = require('./message');
 var MessageComponent = (function () {
     function MessageComponent() {
-        this.saidMessage = '';
     }
     MessageComponent.prototype.ngOnInit = function () { };
-    MessageComponent.prototype.submitMessage = function (author, content) {
-        this.message = new message_1.Message(author.value, content.value);
-        this.saidMessage = this.message.getMessage();
-    };
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', message_1.Message)
+    ], MessageComponent.prototype, "message", void 0);
     MessageComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
             selector: 'lc-message',
             templateUrl: 'message.component.html',
             styles: [
-                "label {\n\t\t\tdisplay: inline;\n\t\t\tfont-weight: bold;\n\t\t}",
-                "label:before, label:after {\n\t\t\tcontent: \"\\A\";\n\t\t\twhite-space: pre;\n\t\t}",
-                "button {\n\t\t\tdisplay: block;\n\t\t}"
+                "\n\t\th1 {\n\t\t\tcolor: #369;\n\t\t\tfont-family: Arial, Helvetica, sans-serif;\n\t\t\tfont-size: 250%;\n\t\t}\n\t\th2,\n\t\th3 {\n\t\t\tcolor: #444;\n\t\t\tfont-family: Arial, Helvetica, sans-serif;\n\t\t\tfont-weight: lighter;\n\t\t}\n\t\t"
             ]
         }), 
         __metadata('design:paramtypes', [])
@@ -35,4 +32,4 @@ var MessageComponent = (function () {
     return MessageComponent;
 }());
 exports.MessageComponent = MessageComponent;
-//# sourceMappingURL=message.componet.js.map
+//# sourceMappingURL=message.component.js.map

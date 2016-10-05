@@ -1,10 +1,10 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { Message } from './message/message'
+import { Component, OnInit } from '@angular/core';
+import { Message } from '../message/message';
 
 @Component( {
 	moduleId: module.id,
-	selector: 'lc-message',
-	templateUrl: 'message.component.html',
+	selector: 'lc-message-input',
+	templateUrl: 'message-input.component.html',
 	styles: [
 		`label {
 			display: inline;
@@ -20,7 +20,7 @@ import { Message } from './message/message'
 	]
 })
 
-export class MessageComponent implements OnInit {
+export class MessageInputComponent implements OnInit {
 	message: Message;
 	saidMessage: string;
 	constructor() {

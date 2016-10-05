@@ -1,4 +1,5 @@
 "use strict";
+// hold endpoints
 var Constants = (function () {
     function Constants() {
     }

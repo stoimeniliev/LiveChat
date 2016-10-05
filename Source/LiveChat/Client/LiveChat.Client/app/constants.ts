@@ -1,3 +1,4 @@
+// hold endpoints
 export class Constants {
 	getEndpoints() {
 		return {}

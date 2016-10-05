@@ -9,19 +9,23 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { OrganizerComponent } from './organizer/organizer.component';
 import { AttenderComponent } from './attender/attender.component';
-import { MessageComponent } from './messages/message.componet';
+import { MessagesListComponent } from './messages/messages-list/messages-list.component';
+import { MessageInputComponent } from './messages/message-input/message-input.componet';
+import { MessageComponent } from './messages/message/message.component';
 
 @NgModule( {
-	imports: [
+	imports: [ // For external self-contained modules
 		BrowserModule, // Make the app runnable in the browser
 		FormsModule, // NgModel
 		routing
 	],
-	declarations: [
+	declarations: [ // For internal components to the app
 		AppComponent,
 		HomeComponent,
 		OrganizerComponent,
 		AttenderComponent,
+		MessageInputComponent,
+		MessagesListComponent,
 		MessageComponent
 	],
 	providers: [ appRoutingProviders ],
