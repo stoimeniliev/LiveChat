@@ -9,16 +9,24 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var messages_service_1 = require('../services/messages-service/messages-service');
 var OrganizerComponent = (function () {
-    function OrganizerComponent() {
+    function OrganizerComponent(messagesService) {
+        this.messagesService = messagesService;
     }
+    OrganizerComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.messagesService
+            .getMessages()
+            .subscribe(function (messages) { return _this.messagesList = messages; });
+    };
     OrganizerComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
             selector: 'lc-attender',
             templateUrl: 'organizer.component.html'
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [messages_service_1.MessagesService])
     ], OrganizerComponent);
     return OrganizerComponent;
 }());

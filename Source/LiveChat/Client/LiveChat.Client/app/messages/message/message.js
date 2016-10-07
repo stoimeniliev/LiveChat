@@ -4,9 +4,6 @@ var Message = (function () {
         this.author = author;
         this.content = content;
     }
-    Message.prototype.getMessage = function () {
-        return this.author + ": " + this.content;
-    };
     return Message;
 }());
 exports.Message = Message;

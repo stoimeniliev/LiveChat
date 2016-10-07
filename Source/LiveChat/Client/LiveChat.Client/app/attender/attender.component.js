@@ -9,16 +9,31 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var messages_service_1 = require('../services/messages-service/messages-service');
 var AttenderComponent = (function () {
-    function AttenderComponent() {
+    function AttenderComponent(messagesService) {
+        this.messagesService = messagesService;
+        this.messagesList = [];
     }
+    AttenderComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.messagesService
+            .getMessages()
+            .subscribe(function (messages) { return _this.messagesList = messages; });
+    };
+    AttenderComponent.prototype.handleMessage = function (message) {
+        var _this = this;
+        this.messagesService
+            .addMessage(message)
+            .subscribe(function (message) { return _this.messagesList.unshift(message); });
+    };
     AttenderComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
             selector: 'lc-organizer',
             templateUrl: 'attender.component.html'
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [messages_service_1.MessagesService])
     ], AttenderComponent);
     return AttenderComponent;
 }());

@@ -1,6 +1,6 @@
 // The root of the app from the stand point of the user. This points to the html tag that is placed in the initial index.html.
 // In this case lc-app (lc - live chat).
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component( {
 	moduleId: module.id,
@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 	templateUrl: 'app.component.html'
 })
 
-export class AppComponent {
-
+export class AppComponent implements OnInit {
+	ngOnInit() { }
 }
 

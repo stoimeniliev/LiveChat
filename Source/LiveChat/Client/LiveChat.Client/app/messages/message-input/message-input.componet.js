@@ -10,15 +10,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var message_1 = require('../message/message');
+var messages_service_1 = require('../../services/messages-service/messages-service');
 var MessageInputComponent = (function () {
-    function MessageInputComponent() {
-        this.saidMessage = '';
+    function MessageInputComponent(messageService) {
+        this.messageService = messageService;
+        this.onNewMessage = new core_1.EventEmitter();
     }
     MessageInputComponent.prototype.ngOnInit = function () { };
     MessageInputComponent.prototype.submitMessage = function (author, content) {
         this.message = new message_1.Message(author.value, content.value);
-        this.saidMessage = this.message.getMessage();
+        this.onNewMessage.emit(this.message);
     };
+    __decorate([
+        core_1.Output(), 
+        __metadata('design:type', Object)
+    ], MessageInputComponent.prototype, "onNewMessage", void 0);
     MessageInputComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
@@ -30,7 +36,7 @@ var MessageInputComponent = (function () {
                 "button {\n\t\t\tdisplay: block;\n\t\t}"
             ]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [messages_service_1.MessagesService])
     ], MessageInputComponent);
     return MessageInputComponent;
 }());

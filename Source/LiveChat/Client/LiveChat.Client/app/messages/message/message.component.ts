@@ -24,6 +24,7 @@ import { Message } from './message';
 
 export class MessageComponent implements OnInit {
 	@Input() message: Message;
+
 	constructor() {
 	}
 

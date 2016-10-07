@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Message } from '../message/message';
+import { MessagesService } from '../../services/messages-service/messages-service';
 
 @Component( {
 	moduleId: module.id,
@@ -8,18 +9,10 @@ import { Message } from '../message/message';
 })
 
 export class MessagesListComponent implements OnInit {
-	messageList: Message[];
+	@Input() messagesList: Message[];
 
-	constructor() {
-		this.messageList = [
-			new Message( 'Pesho', 'Az sam mega iak' ),
-			new Message( 'Tito', 'I az sam mega iak' ),
-			new Message( 'Kiro', 'Az sam NAI IAK' )
-		];
-	}
+	constructor( private messagesService: MessagesService ) { }
 
-	ngOnInit() { 
-		alert('Use service for loading messages!');
-	}
+	ngOnInit() { }
 }
 

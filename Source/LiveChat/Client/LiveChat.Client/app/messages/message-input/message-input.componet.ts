@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { Message } from '../message/message';
+import { MessagesService } from '../../services/messages-service/messages-service';
 
 @Component( {
 	moduleId: module.id,
@@ -21,17 +22,18 @@ import { Message } from '../message/message';
 })
 
 export class MessageInputComponent implements OnInit {
-	message: Message;
-	saidMessage: string;
-	constructor() {
-		this.saidMessage = '';
-	}
+	private message: Message;
+	private saidMessage: string;
+
+	@Output() onNewMessage = new EventEmitter<Message>();
+
+	constructor( private messageService: MessagesService ) { }
 
 	ngOnInit() { }
 
-	submitMessage(author: HTMLInputElement, content: HTMLInputElement) {
+	submitMessage( author: HTMLInputElement, content: HTMLInputElement ) {
 		this.message = new Message( author.value, content.value );
-		this.saidMessage = this.message.getMessage();
+		this.onNewMessage.emit( this.message );
 	}
 }
 

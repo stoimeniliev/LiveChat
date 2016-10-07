@@ -9,25 +9,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var message_1 = require('../message/message');
+var messages_service_1 = require('../../services/messages-service/messages-service');
 var MessagesListComponent = (function () {
-    function MessagesListComponent() {
-        this.messageList = [
-            new message_1.Message('Pesho', 'Az sam mega iak'),
-            new message_1.Message('Tito', 'I az sam mega iak'),
-            new message_1.Message('Kiro', 'Az sam NAI IAK')
-        ];
+    function MessagesListComponent(messagesService) {
+        this.messagesService = messagesService;
     }
-    MessagesListComponent.prototype.ngOnInit = function () {
-        alert('Use service for loading messages!');
-    };
+    MessagesListComponent.prototype.ngOnInit = function () { };
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', Array)
+    ], MessagesListComponent.prototype, "messagesList", void 0);
     MessagesListComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
             selector: 'lc-messages-list',
             templateUrl: 'messages-list.component.html'
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [messages_service_1.MessagesService])
     ], MessagesListComponent);
     return MessagesListComponent;
 }());
