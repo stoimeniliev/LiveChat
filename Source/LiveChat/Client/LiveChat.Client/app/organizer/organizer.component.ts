@@ -17,7 +17,7 @@ export class OrganizerComponent implements OnInit {
 	ngOnInit() {
 		this.messagesService
 			.getMessages()
-			.subscribe( messages => this.messagesList = messages );
+			.subscribe( messages => this.messagesList = messages.reverse() );
 	}
 }
 

@@ -19,7 +19,7 @@ var AttenderComponent = (function () {
         var _this = this;
         this.messagesService
             .getMessages()
-            .subscribe(function (messages) { return _this.messagesList = messages; });
+            .subscribe(function (messages) { return _this.messagesList = messages.reverse(); });
     };
     AttenderComponent.prototype.handleMessage = function (message) {
         var _this = this;

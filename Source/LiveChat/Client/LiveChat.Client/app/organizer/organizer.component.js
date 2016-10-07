@@ -18,7 +18,7 @@ var OrganizerComponent = (function () {
         var _this = this;
         this.messagesService
             .getMessages()
-            .subscribe(function (messages) { return _this.messagesList = messages; });
+            .subscribe(function (messages) { return _this.messagesList = messages.reverse(); });
     };
     OrganizerComponent = __decorate([
         core_1.Component({

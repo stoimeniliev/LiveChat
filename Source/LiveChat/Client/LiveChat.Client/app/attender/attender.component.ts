@@ -17,13 +17,13 @@ export class AttenderComponent implements OnInit {
 	ngOnInit() {
 		this.messagesService
 			.getMessages()
-			.subscribe( messages => this.messagesList = messages);
+			.subscribe( messages => this.messagesList = messages.reverse() );
 	}
 
 	handleMessage( message: Message ) {
 		this.messagesService
 			.addMessage( message )
-			.subscribe(message => this.messagesList.unshift(message));
+			.subscribe( message => this.messagesList.unshift( message ) );
 	}
 }
 
