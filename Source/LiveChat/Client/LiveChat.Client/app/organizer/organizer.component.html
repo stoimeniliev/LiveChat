@@ -1,2 +1,5 @@
-<h2>Wellcome to the organizer view</h2>
+<div *ngIf="loading">
+	Loading messages...
+</div>
+<div *ngIf="noMessages">No messages</div>
 <lc-messages-list [messagesList]="messagesList"></lc-messages-list>

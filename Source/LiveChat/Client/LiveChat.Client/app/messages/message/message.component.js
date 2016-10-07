@@ -24,7 +24,7 @@ var MessageComponent = (function () {
             selector: 'lc-message',
             templateUrl: 'message.component.html',
             styles: [
-                "\n\t\th1 {\n\t\t\tcolor: #369;\n\t\t\tfont-family: Arial, Helvetica, sans-serif;\n\t\t\tfont-size: 250%;\n\t\t}\n\t\th2,\n\t\th3 {\n\t\t\tcolor: #444;\n\t\t\tfont-family: Arial, Helvetica, sans-serif;\n\t\t\tfont-weight: lighter;\n\t\t}\n\t\t"
+                "\n\t\th1 {\n\t\t\tcolor: grey;\n\t\t\tfont-family: Arial, Helvetica, sans-serif;\n\t\t\tfont-size: 150%;\n\t\t\tfont-style: italic;\n\t\t}\n\t\th2,\n\t\th3 {\n\t\t\tcolor: #444;\n\t\t\tfont-family: Arial, Helvetica, sans-serif;\n\t\t\tfont-weight: lighter;\n\t\t}\n\t\t"
             ]
         }), 
         __metadata('design:paramtypes', [])

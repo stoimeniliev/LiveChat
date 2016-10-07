@@ -11,13 +11,23 @@ import { Message } from '../messages/message/message';
 
 export class OrganizerComponent implements OnInit {
 	messagesList: Message[]
+	private noMessages: boolean;
+	private loading: boolean = true;
 
 	constructor( private messagesService: MessagesService, ) { }
 
 	ngOnInit() {
 		this.messagesService
 			.getMessages()
-			.subscribe( messages => this.messagesList = messages.reverse() );
+			.subscribe( messages => {
+				this.loading = false;
+				if ( messages.length ) {
+					this.noMessages = false;
+					this.messagesList = messages.reverse();
+				} else {
+					this.noMessages = true;
+				}
+			});
 	}
 }
 

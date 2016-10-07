@@ -13,12 +13,22 @@ var messages_service_1 = require('../services/messages-service/messages-service'
 var OrganizerComponent = (function () {
     function OrganizerComponent(messagesService) {
         this.messagesService = messagesService;
+        this.loading = true;
     }
     OrganizerComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.messagesService
             .getMessages()
-            .subscribe(function (messages) { return _this.messagesList = messages.reverse(); });
+            .subscribe(function (messages) {
+            _this.loading = false;
+            if (messages.length) {
+                _this.noMessages = false;
+                _this.messagesList = messages.reverse();
+            }
+            else {
+                _this.noMessages = true;
+            }
+        });
     };
     OrganizerComponent = __decorate([
         core_1.Component({
