@@ -18,8 +18,10 @@ var MessageInputComponent = (function () {
     }
     MessageInputComponent.prototype.ngOnInit = function () { };
     MessageInputComponent.prototype.submitMessage = function (author, content) {
-        this.message = new message_1.Message(author.value, content.value);
+        this.message = new message_1.Message(author.value || 'Annonymous', content.value);
         this.onNewMessage.emit(this.message);
+        author.value = '';
+        content.value = '';
     };
     __decorate([
         core_1.Output(), 

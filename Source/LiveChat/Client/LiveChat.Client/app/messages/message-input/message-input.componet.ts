@@ -32,8 +32,10 @@ export class MessageInputComponent implements OnInit {
 	ngOnInit() { }
 
 	submitMessage( author: HTMLInputElement, content: HTMLInputElement ) {
-		this.message = new Message( author.value, content.value );
+		this.message = new Message( author.value || 'Annonymous', content.value );
 		this.onNewMessage.emit( this.message );
+		author.value = '';
+		content.value = '';
 	}
 }
 
