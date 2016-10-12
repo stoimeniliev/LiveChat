@@ -14,4 +14,3 @@ export const CONSTANTS = {
 		addMessage: baseUrl + 'messages'
 	}
 }
-

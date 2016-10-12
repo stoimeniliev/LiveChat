@@ -14,9 +14,9 @@ var Observable_1 = require('rxjs/Observable');
 var constants_1 = require('../../constants');
 var MessagesService = (function () {
     function MessagesService(http) {
-        this.http = http;
         this.getMessagesUrl = constants_1.CONSTANTS.ENDPOINTS.getMessages;
         this.addMessageUrl = constants_1.CONSTANTS.ENDPOINTS.addMessage;
+        this.http = http;
     }
     MessagesService.prototype.getMessages = function () {
         // console.log(this.http.get(this.getMessagesUrl));

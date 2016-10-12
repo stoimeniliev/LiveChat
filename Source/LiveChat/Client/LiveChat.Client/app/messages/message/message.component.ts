@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Message } from './message';
 
-@Component( {
+@Component({
 	moduleId: module.id,
 	selector: 'lc-message',
 	templateUrl: 'message.component.html',
@@ -31,4 +31,3 @@ export class MessageComponent implements OnInit {
 
 	ngOnInit() { }
 }
-

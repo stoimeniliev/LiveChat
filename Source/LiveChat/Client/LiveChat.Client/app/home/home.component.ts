@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-@Component( {
+@Component({
 	moduleId: module.id,
 	selector: 'lc-home',
 	templateUrl: 'home.component.html'
@@ -9,4 +9,3 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 	ngOnInit() { }
 }
-

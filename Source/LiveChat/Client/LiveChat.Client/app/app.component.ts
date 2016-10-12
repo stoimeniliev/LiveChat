@@ -2,7 +2,7 @@
 // In this case lc-app (lc - live chat).
 import { Component, OnInit } from '@angular/core';
 
-@Component( {
+@Component({
 	moduleId: module.id,
 	selector: 'lc-app',
 	templateUrl: 'app.component.html'
@@ -11,4 +11,3 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
 	ngOnInit() { }
 }
-

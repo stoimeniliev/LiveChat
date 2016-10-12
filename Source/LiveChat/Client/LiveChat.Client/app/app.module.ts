@@ -19,9 +19,9 @@ import { MessageInputComponent } from './messages/message-input/message-input.co
 import { MessageComponent } from './messages/message/message.component';
 import { MessagesService } from './services/messages-service/messages-service';
 
-@NgModule( {
+@NgModule({
 	imports: [ // For external self-contained modules
-		InMemoryWebApiModule.forRoot( MessageData ), // DELETE THIS IN PRODUCTION!
+		InMemoryWebApiModule.forRoot(MessageData), // DELETE THIS IN PRODUCTION!
 		BrowserModule, // Make the app runnable in the browser
 		FormsModule, // NgModel
 		HttpModule,
@@ -44,4 +44,3 @@ import { MessagesService } from './services/messages-service/messages-service';
 })
 
 export class AppModule { }
-

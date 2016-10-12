@@ -10,10 +10,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var message_1 = require('../message/message');
-var messages_service_1 = require('../../services/messages-service/messages-service');
 var MessageInputComponent = (function () {
-    function MessageInputComponent(messageService) {
-        this.messageService = messageService;
+    function MessageInputComponent() {
         this.onNewMessage = new core_1.EventEmitter();
     }
     MessageInputComponent.prototype.ngOnInit = function () { };
@@ -38,7 +36,7 @@ var MessageInputComponent = (function () {
                 "button {\n\t\t\tdisplay: block;\n\t\t}"
             ]
         }), 
-        __metadata('design:paramtypes', [messages_service_1.MessagesService])
+        __metadata('design:paramtypes', [])
     ], MessageInputComponent);
     return MessageInputComponent;
 }());

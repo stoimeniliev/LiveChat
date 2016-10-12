@@ -9,34 +9,37 @@ import { Message } from '../../messages/message/message';
 export class MessagesService {
 	private getMessagesUrl = CONSTANTS.ENDPOINTS.getMessages;
 	private addMessageUrl = CONSTANTS.ENDPOINTS.addMessage;
+	private http: Http;
 
-	constructor( private http: Http ) { }
+	constructor(http: Http) {
+		this.http = http;
+	}
 
 	getMessages(): Observable<Message[]> {
 		// console.log(this.http.get(this.getMessagesUrl));
-		return this.http.get( this.getMessagesUrl )
-			.map( this.extractData )
-			.catch( this.handleError );
+		return this.http.get(this.getMessagesUrl)
+			.map(this.extractData)
+			.catch(this.handleError);
 	}
 
-	addMessage( message: Message ): Observable<Message> {
-		let body = JSON.stringify( message );
-		let headers = new Headers( { 'Content-Type': 'application/json' });
-		let options = new RequestOptions( { headers: headers });
+	addMessage(message: Message): Observable<Message> {
+		let body = JSON.stringify(message);
+		let headers = new Headers({ 'Content-Type': 'application/json' });
+		let options = new RequestOptions({ headers: headers });
 
-		return this.http.post( this.addMessageUrl, body, options )
-			.map( this.extractData )
-			.catch( this.handleError );
+		return this.http.post(this.addMessageUrl, body, options)
+			.map(this.extractData)
+			.catch(this.handleError);
 	}
 
-	private extractData( res: Response ) {
+	private extractData(res: Response) {
 		let body = res.json();
 		return body.data;
 	}
 
-	private handleError( error: any ) {
-		console.log( error );
-		return Observable.throw( error.message );
+	private handleError(error: any) {
+		console.log(error);
+		return Observable.throw(error.message);
 	}
 }
 
