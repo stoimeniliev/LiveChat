@@ -12,8 +12,8 @@ var core_1 = require('@angular/core');
 var messages_service_1 = require('../services/messages-service/messages-service');
 var OrganizerComponent = (function () {
     function OrganizerComponent(messagesService) {
-        this.messagesService = messagesService;
         this.loading = true;
+        this.messagesService = messagesService;
     }
     OrganizerComponent.prototype.ngOnInit = function () {
         var _this = this;
