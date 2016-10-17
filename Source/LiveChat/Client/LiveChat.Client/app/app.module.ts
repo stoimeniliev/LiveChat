@@ -5,6 +5,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+// separate the app into modules?
+// import { AttenderModule } from 'attender.module'
+// import { OrganizerModule } from 'organizer.module'
+
 import { InMemoryWebApiModule } from 'angular2-in-memory-web-api'; // For development only. Creates an in-memori db.
 import { MessageData } from './services/messages-service/messages-mock/message-data'; // Mock service for messages.
 
