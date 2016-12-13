@@ -1,4 +1,4 @@
-﻿{
+{
   "userSecretsId": "aspnet-LiveChat.Server.Web-4a71217a-f5cb-4a4f-a608-40382217a5ac",
 
   "dependencies": {
@@ -41,10 +41,11 @@
       "version": "1.0.0-preview2-final",
       "type": "build"
     },
-    "Microsoft.VisualStudio.Web.CodeGenerators.Mvc":  {
+    "Microsoft.VisualStudio.Web.CodeGenerators.Mvc": {
       "version": "1.0.0-preview2-final",
       "type": "build"
-    }
+    },
+    "LiveChat.Server.Data": "1.0.0-*"
   },
 
   "tools": {

@@ -45,11 +45,11 @@ namespace LiveChat.Server.Web
             // Add framework services.
             services.AddApplicationInsightsTelemetry(Configuration);
 
-            services.AddDbContext<ApplicationDbContext>(options =>
+            services.AddDbContext<LiveChatDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
-            services.AddIdentity<ApplicationUser, IdentityRole>()
-                .AddEntityFrameworkStores<ApplicationDbContext>()
+            services.AddIdentity<User, IdentityRole>()
+                .AddEntityFrameworkStores<LiveChatDbContext>()
                 .AddDefaultTokenProviders();
 
             services.AddMvc();
@@ -58,7 +58,7 @@ namespace LiveChat.Server.Web
             services.AddTransient<IEmailSender, AuthMessageSender>();
             services.AddTransient<ISmsSender, AuthMessageSender>();
 
-            services.AddIdentity<ApplicationUser, IdentityRole>(identity =>
+            services.AddIdentity<User, IdentityRole>(identity =>
             {
                 identity.Password.RequireDigit = false;
                 identity.Password.RequireLowercase = false;
