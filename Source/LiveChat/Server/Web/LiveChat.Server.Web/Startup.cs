@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using LiveChat.Server.Web.Data;
+using LiveChat.Server.Data;
 using LiveChat.Server.Web.Models;
 using LiveChat.Server.Web.Services;
 

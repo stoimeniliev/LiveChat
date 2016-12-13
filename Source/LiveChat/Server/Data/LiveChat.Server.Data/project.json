@@ -3,7 +3,11 @@
 
   "dependencies": {
     "LiveChat.Server.Data.Models": "1.0.0-*",
-    "NETStandard.Library": "1.6.0"
+    "LiveChat.Server.Common": "1.0.0-*",
+    "NETStandard.Library": "1.6.0",
+    "Microsoft.EntityFrameworkCore": "1.0.0-*",
+    "Microsoft.EntityFrameworkCore.SqlServer": "1.0.0-*",
+    "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "1.0.0-*"
   },
 
   "tools": {
