@@ -14,6 +14,9 @@ var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var forms_1 = require('@angular/forms');
 var http_1 = require('@angular/http');
+// separate the app into modules?
+// import { AttenderModule } from 'attender.module'
+// import { OrganizerModule } from 'organizer.module'
 var angular2_in_memory_web_api_1 = require('angular2-in-memory-web-api'); // For development only. Creates an in-memori db.
 var message_data_1 = require('./services/messages-service/messages-mock/message-data'); // Mock service for messages.
 require('./rxjs-operators');
