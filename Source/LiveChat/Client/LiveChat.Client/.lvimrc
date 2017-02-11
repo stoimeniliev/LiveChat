@@ -1,7 +1,0 @@
-let NERDTreeIgnore = ['\.js$', '\.js.map$']
-" let g:ctrlp_custom_ignore = {
-" 	\ 'dir': 'build',
-" 	\ 'file': '\.js$|\.js.map$'
-" }
-" D:\Work\LiveChat\LiveChat\Source\LiveChat\Client\LiveChat.Client\.lvimrc
-"
