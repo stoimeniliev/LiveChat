@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/core/theming/prebuilt/indigo-pink.css';
+body {
+	margin: 0;
+}
+
+.page-center {
+	text-align: center;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	/* bring your own prefixes */
+	transform: translate(-50%, -50%);
+}
+
+.centered {
+	text-align: center;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+}

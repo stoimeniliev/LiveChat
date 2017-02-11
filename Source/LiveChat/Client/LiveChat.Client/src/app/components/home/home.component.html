@@ -1,0 +1,17 @@
+<md-toolbar color="primary">
+	<img src="../assets/leadertalks-avatars.png"
+					class="logo" />
+	<span class="fill-remaining-space"></span>
+	<button md-button>INTRCT</button>
+	<button md-button>Pricing</button>
+	<button md-button>Testimonials</button>
+	<button md-button>Contact</button>
+	<button md-button>Login</button>
+	<button md-button>Register</button>
+</md-toolbar>
+<div id="bg">
+</div>
+<intrct-event-selector [header]="header"
+				class="page-center warn"
+				(eventChosen)="onEventChosen($event)">
+</intrct-event-selector>
