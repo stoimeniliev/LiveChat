@@ -21,7 +21,6 @@ export class HomeComponent implements OnInit {
 	}
 
 	onEventChosen(ev) {
-		console.log(ev);
 		this.store.dispatch(go(['event', ev]));
 	}
 }
