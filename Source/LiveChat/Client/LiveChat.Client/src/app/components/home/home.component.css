@@ -2,10 +2,6 @@
 	width: 200px;
 }
 
-.fill-remaining-space {
-	flex: 1 1 auto;
-}
-
 #bg {
 	position: fixed;
 	top: 0;

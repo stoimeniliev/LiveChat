@@ -1,3 +1,28 @@
-<p>
-  send-message works!
-</p>
+<md-grid-list cols="1"
+				rowHeight="100px">
+	<md-grid-tile colspan="1"
+					rowspan="1">
+		<form novalidate
+						(ngSubmit)="askQuestion(questionForm)"
+						[formGroup]="questionForm">
+			<table cellspacing="9">
+				<tr>
+					<td style="width: 100%;">
+						<md-input-container style="width: 100%;">
+							<textarea md-input
+											formControlName="question"
+											placeholder="Ask a question">
+									</textarea>
+						</md-input-container>
+					</td>
+					<td>
+						<button md-mini-fab
+										type="submit"
+										[disabled]="questionForm.invalid"
+										color="primary"><md-icon>send</md-icon></button>
+					</td>
+				</tr>
+			</table>
+		</form>
+	</md-grid-tile>
+</md-grid-list>

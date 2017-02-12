@@ -1,5 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~@angular/material/core/theming/prebuilt/indigo-pink.css';
+@import '~https://fonts.googleapis.com/icon?family=Material+Icons';
+
 body {
 	margin: 0;
 }
@@ -18,4 +20,12 @@ body {
 	position: relative;
 	left: 50%;
 	transform: translateX(-50%);
+}
+
+.md-toolbar-spacer {
+	flex: 1 1 auto;
+}
+
+.md-toolbar-icon {
+	padding: 0 14px;
 }

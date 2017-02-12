@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
+
+import { MaterialModule } from '@angular/material';
 
 import { EventRoutingModule } from './event-routing.module';
 import { SharedModule } from '../shared/shared.module';
@@ -8,19 +11,28 @@ import { EventComponent } from './event.component';
 import { MessageComponent } from './components/message/message.component';
 import { SendMessageComponent } from './components/send-message/send-message.component';
 import { LiveEventComponent } from './components/live-event/live-event.component';
+import { MessageListComponent } from './components/message-list/message-list.component';
+import { SponsoredMessageComponent } from './components/sponsored-message/sponsored-message.component';
 
 @NgModule({
 	imports: [
 		CommonModule,
 		EventRoutingModule,
-		SharedModule
+		SharedModule,
+
+		MaterialModule,
+
+		ReactiveFormsModule
 	],
 	declarations: [
 		EventComponent,
 		MessageComponent,
 		SendMessageComponent,
-		LiveEventComponent
+		LiveEventComponent,
+		MessageListComponent,
+		SponsoredMessageComponent
 	]
 })
 export class EventModule { }
+
 
