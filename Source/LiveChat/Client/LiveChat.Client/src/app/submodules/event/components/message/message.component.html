@@ -1,19 +1,18 @@
+<h3 md-subheader
+				*ngIf="message.sponsored">Sponsored</h3>
 <md-list-item>
-	<md-icon md-list-avatar>thumb_up</md-icon>
-	<md-icon md-list-avatar>thumb_down</md-icon>
-	<h4 md-line>Ivan Ivanov</h4>
-	<p md-line>Some textSome textSome textSome textSome textome text</p>
+	<md-icon md-list-avatar
+					class="not-clickable"
+					*ngIf="message.sponsored">star_rate</md-icon>
+	<md-icon md-list-avatar
+					class="clickable"
+					(click)="onThumbsUp()"
+					*ngIf="!message.sponsored">thumb_up</md-icon>
+	<md-icon md-list-avatar
+					class="clickable"
+					(click)="onThumbsDown()"
+					*ngIf="!message.sponsored">thumb_down</md-icon>
+	<h4 md-line>{{ message.author }}</h4>
+	<p md-line>{{ message.content }}</p>
 </md-list-item>
 <md-divider></md-divider>
-<!-- <md&#45;card> -->
-<!-- 	<md&#45;card&#45;header> -->
-<!-- 		<md&#45;card&#45;subtitle><h2><em>Stefan Stefanov</em></h2></md&#45;card&#45;subtitle> -->
-<!-- 	</md&#45;card&#45;header> -->
-<!-- 	<md&#45;card&#45;content> -->
-<!-- 		Some really long question that goes into here and nobody knows what to say so it just stays here and is really really long... -->
-<!-- 	</md&#45;card&#45;content> -->
-<!-- 	<md&#45;card&#45;actions> -->
-<!-- 		<button md&#45;button><md&#45;icon>thumb_up</md&#45;icon></button> -->
-<!-- 		<button md&#45;button><md&#45;icon>thumb_down</md&#45;icon></button> -->
-<!-- 	</md&#45;card&#45;actions> -->
-<!-- </md&#45;card> -->

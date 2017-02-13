@@ -12,7 +12,6 @@ import { MessageComponent } from './components/message/message.component';
 import { SendMessageComponent } from './components/send-message/send-message.component';
 import { LiveEventComponent } from './components/live-event/live-event.component';
 import { MessageListComponent } from './components/message-list/message-list.component';
-import { SponsoredMessageComponent } from './components/sponsored-message/sponsored-message.component';
 
 @NgModule({
 	imports: [
@@ -30,7 +29,6 @@ import { SponsoredMessageComponent } from './components/sponsored-message/sponso
 		SendMessageComponent,
 		LiveEventComponent,
 		MessageListComponent,
-		SponsoredMessageComponent
 	]
 })
 export class EventModule { }

@@ -29,3 +29,11 @@ body {
 .md-toolbar-icon {
 	padding: 0 14px;
 }
+
+.clickable {
+	cursor: pointer;
+}
+
+.not-clickable {
+	cursor: default;
+}

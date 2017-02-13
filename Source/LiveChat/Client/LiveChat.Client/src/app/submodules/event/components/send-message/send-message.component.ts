@@ -10,7 +10,8 @@ import {
 	FormGroup,
 	Validators
 } from '@angular/forms';
-import { Question } from '../../models/question.model';
+
+import { Message } from '../../models/message.model';
 
 @Component({
 	selector: 'intrct-send-message',
@@ -30,7 +31,7 @@ export class SendMessageComponent implements OnInit {
 		});
 	}
 
-	askQuestion({ value, valid }: { value: Question, valid: boolean }):void {
+	askQuestion({ value }: { value }):void {
 		this.askedQuestion.emit(value.question);
 	}
 }
