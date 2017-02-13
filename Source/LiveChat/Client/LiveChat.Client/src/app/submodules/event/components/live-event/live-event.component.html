@@ -1,11 +1,10 @@
-<md-toolbar color="accent">
+<md-toolbar color="warn">
 	<span>{{ eventName }}</span>
 	<span class="md-toolbar-spacer"></span>
-	<md-icon class="md-toolbar-icon">thumb_up</md-icon>
-	<md-icon class="md-toolbar-icon">thumb_down</md-icon>
+	<md-icon class="md-toolbar-icon clickable">thumb_up</md-icon>
+	<md-icon class="md-toolbar-icon clickable">thumb_down</md-icon>
 </md-toolbar>
 <intrct-send-message (askedQuestion)="onAskedQuestion($event)"></intrct-send-message>
-<!-- <intrct&#45;message></intrct&#45;message> -->
 <intrct-message-list>
 	<intrct-message *ngFor="let message of messages"
 						(thumbsUp)="onThumbsUp($event)"

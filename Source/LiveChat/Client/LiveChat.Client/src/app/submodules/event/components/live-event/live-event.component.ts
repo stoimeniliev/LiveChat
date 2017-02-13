@@ -36,11 +36,11 @@ export class LiveEventComponent implements OnInit {
 		console.log(ev);
 	}
 
-	onThumbsUp(ev) {
+	onThumbsUp(ev: Message) {
 		console.log(ev);
 	}
 
-	onThumbsDown(ev) {
+	onThumbsDown(ev: Message) {
 		console.log(ev);
 	}
 }

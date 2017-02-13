@@ -13,6 +13,6 @@
 					(click)="onThumbsDown()"
 					*ngIf="!message.sponsored">thumb_down</md-icon>
 	<h4 md-line>{{ message.author }}</h4>
-	<p md-line>{{ message.content }}</p>
+	<p md-line (click)="showFullMessage()">{{ message.content }}</p>
 </md-list-item>
 <md-divider></md-divider>
