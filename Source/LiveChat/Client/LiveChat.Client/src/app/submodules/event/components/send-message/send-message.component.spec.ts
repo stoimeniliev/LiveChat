@@ -5,24 +5,24 @@ import { DebugElement } from '@angular/core';
 
 import { SendMessageComponent } from './send-message.component';
 
-describe('SendMessageComponent', () => {
-  let component: SendMessageComponent;
-  let fixture: ComponentFixture<SendMessageComponent>;
+describe( 'SendMessageComponent', () => {
+	let component: SendMessageComponent;
+	let fixture: ComponentFixture<SendMessageComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ SendMessageComponent ]
-    })
-    .compileComponents();
-  }));
+	beforeEach( async(() => {
+		TestBed.configureTestingModule( {
+			declarations: [ SendMessageComponent ]
+		} )
+			.compileComponents();
+	} ) );
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(SendMessageComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+	beforeEach(() => {
+		fixture = TestBed.createComponent( SendMessageComponent );
+		component = fixture.componentInstance;
+		fixture.detectChanges();
+	} );
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+	it( 'should create', () => {
+		expect( component ).toBeTruthy();
+	} );
+} );

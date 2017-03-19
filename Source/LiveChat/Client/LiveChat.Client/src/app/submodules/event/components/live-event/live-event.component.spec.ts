@@ -5,24 +5,24 @@ import { DebugElement } from '@angular/core';
 
 import { LiveEventComponent } from './live-event.component';
 
-describe('LiveEventComponent', () => {
-  let component: LiveEventComponent;
-  let fixture: ComponentFixture<LiveEventComponent>;
+describe( 'LiveEventComponent', () => {
+	let component: LiveEventComponent;
+	let fixture: ComponentFixture<LiveEventComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ LiveEventComponent ]
-    })
-    .compileComponents();
-  }));
+	beforeEach( async(() => {
+		TestBed.configureTestingModule( {
+			declarations: [ LiveEventComponent ]
+		} )
+			.compileComponents();
+	} ) );
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(LiveEventComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+	beforeEach(() => {
+		fixture = TestBed.createComponent( LiveEventComponent );
+		component = fixture.componentInstance;
+		fixture.detectChanges();
+	} );
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+	it( 'should create', () => {
+		expect( component ).toBeTruthy();
+	} );
+} );
