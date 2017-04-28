@@ -1,14 +1,14 @@
-import { INTRCTPage } from './app.po';
+import { IntrctPage } from './app.po';
 
-describe('intrct App', function() {
-  let page: INTRCTPage;
+describe('intrct App', () => {
+  let page: IntrctPage;
 
   beforeEach(() => {
-    page = new INTRCTPage();
+    page = new IntrctPage();
   });
 
   it('should display message saying app works', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('app works!');
+    expect(page.getParagraphText()).toEqual('intrct works!');
   });
 });
