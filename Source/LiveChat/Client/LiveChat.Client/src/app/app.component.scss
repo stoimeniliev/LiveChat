@@ -1,7 +1,6 @@
-md-sidenav {
-	width: 215px;
-	background-color: blue;
-}
+@import "../intrct-theme.scss";
+
+@include intrct-dark-background($intrct-dark-theme);
 
 html,
 body,
@@ -11,4 +10,8 @@ md-sidenav-container,
 	margin: 0;
 	width: 100%;
 	height: 100%;
+}
+
+md-sidenav {
+	width: 215px;
 }
