@@ -6,7 +6,9 @@
 	<h1>
 		{{title}}
 	</h1>
-	<div class="my-content">Main content</div>
-	<button md-raised-button (click)="sidebar.open()">Open sidebar</button>
+	<div class="my-content">Main content
+		<button md-raised-button
+						(click)="sidebar.open()">Open sidebar</button>
+	</div>
 </md-sidenav-container>
 <router-outlet></router-outlet>
