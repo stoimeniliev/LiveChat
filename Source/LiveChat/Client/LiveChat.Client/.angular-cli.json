@@ -18,8 +18,9 @@
 		"testTsconfig": "tsconfig.spec.json",
 		"prefix": "intrct",
 		"styles": [
+			"assets/reset.scss",
 			"styles.scss",
-			"intrct-theme.scss",
+			"assets/intrct-theme.scss",
 			"../node_modules/font-awesome/css/font-awesome.css"
 		],
 		"scripts": [],
