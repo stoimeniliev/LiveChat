@@ -10,11 +10,9 @@ export class AppComponent {
 	opened: boolean = !this.isMobile;
 	mode: string = this.isMobile ? 'over' : 'side';
 
-	constructor(){
-		console.log(this.isMobile);
-	}
+	constructor() { }
 
-	openSidebar(sidebar){
+	openSidebar(sidebar) {
 		sidebar.open();
 	}
 }
