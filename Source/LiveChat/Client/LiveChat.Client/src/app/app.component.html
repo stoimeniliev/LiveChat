@@ -1,5 +1,5 @@
 <md-sidenav-container>
-	<md-sidenav mode="over"
+	<md-sidenav mode="side"
 					opened="true"
 					class="dark-background"
 					#sidebar>
@@ -48,18 +48,6 @@
 			<i class="fa fa-copyright fa-fw"></i> INTRCT 2017
 		</div>
 	</md-sidenav>
-	<div class="my-content">
-		<button md-raised-button
-						color="primary"
-						(click)="sidebar.open()">Open sidebar</button>
-		<button md-raised-button
-						color="accent">Accent</button>
-		<div class="intrct-dark">
-			<button md-raised-button
-							color="primary">Dark primary</button>
-			<button md-raised-button
-							color="accent">Dark accent</button>
-		</div>
-	</div>
+	<div class="my-content"></div>
 </md-sidenav-container>
 <router-outlet></router-outlet>
