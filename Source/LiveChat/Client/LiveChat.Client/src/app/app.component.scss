@@ -1,6 +1,26 @@
+@import '~@angular/material/theming';
 @import "../intrct-theme.scss";
 
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
 @include intrct-dark-background($intrct-dark-theme);
+
+@mixin logo-dimensions($width, $height) {
+	width: $width;
+	height: $height;
+}
+
+@mixin position-logo($right, $top, $offset) {
+		position: absolute;
+		margin-right: $offset;
+		right: $right;
+		top: $top;
+}
+
+$right-offset: 37px;
+$sidebar-width: 215px;
+$logo-size: (width: 99px, height:34px);
+$logo-position: (right: 0px, top: 51px, offset: $right-offset);
 
 html,
 body,
@@ -13,5 +33,23 @@ md-sidenav-container,
 }
 
 md-sidenav {
-	width: 215px;
+	width: $sidebar-width;
+	padding-right: $right-offset;
+	color: white !important;
+	font-family: 'Montserrat', sans-serif;
+
+	.logo {
+		@include logo-dimensions($logo-size...);
+		@include position-logo($logo-position...);
+		background: url('/assets/Logo_white.svg');
+	}
+
+	.menu {
+		padding-top: 195px;
+		text-align: right;
+
+		div {
+			margin-top: 20px;
+		}
+	}
 }
