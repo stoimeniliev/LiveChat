@@ -1,5 +1,6 @@
 @import '~@angular/material/theming';
-@import "../intrct-theme.scss";
+@import '../assets/intrct-theme.scss';
+@import '../assets/reset.scss';
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
@@ -11,16 +12,25 @@
 }
 
 @mixin position-logo($right, $top, $offset) {
-		position: absolute;
-		margin-right: $offset;
-		right: $right;
-		top: $top;
+	position: absolute;
+	margin-right: $offset;
+	right: $right;
+	top: $top;
 }
 
 $right-offset: 37px;
 $sidebar-width: 215px;
-$logo-size: (width: 99px, height:34px);
+$logo-size: (width: 100px, height:35px);
 $logo-position: (right: 0px, top: 51px, offset: $right-offset);
+$font-size: 12px;
+$line-height: $font-size + 0px;
+$line-spacing: 11px;
+$menu-top-offset: 195px;
+$profile-top-offset: 115px;
+$social-top-offset: 115px;
+$trademark-font-size: 9px;
+$trademark-top-offset: 20px;
+$trademark-bottom-offset: 0px;
 
 html,
 body,
@@ -39,17 +49,47 @@ md-sidenav {
 	font-family: 'Montserrat', sans-serif;
 
 	.logo {
+		background: url('/assets/Logo_white.svg');
 		@include logo-dimensions($logo-size...);
 		@include position-logo($logo-position...);
-		background: url('/assets/Logo_white.svg');
+	}
+
+	div {
+		text-align: right;
+
+		>a {
+			&:not(:first-child) {
+				margin-top: $line-spacing;
+			}
+			line-height: $line-height;
+			display: block;
+			cursor: pointer;
+			font-size: $font-size;
+		}
 	}
 
 	.menu {
-		padding-top: 195px;
-		text-align: right;
+		padding-top: $menu-top-offset;
+	}
 
-		div {
-			margin-top: 20px;
+	.profile {
+		padding-top: $profile-top-offset;
+	}
+
+	.social {
+		padding-top: $social-top-offset;
+		line-height: 0px;
+
+		a {
+			margin-top: 0px !important;
+			display: inline-block;
 		}
+	}
+
+	.trademark {
+		padding-top: $trademark-top-offset;
+		padding-bottom: $trademark-bottom-offset;
+		font-size: $trademark-font-size;
+		line-height: 0px;
 	}
 }
