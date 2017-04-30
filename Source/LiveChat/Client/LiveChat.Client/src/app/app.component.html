@@ -1,6 +1,6 @@
 <md-sidenav-container>
-	<md-sidenav mode="side"
-					opened="true"
+	<md-sidenav [mode]="mode"
+					[opened]="opened"
 					class="dark-background"
 					#sidebar>
 		<a class="logo">
@@ -48,6 +48,8 @@
 			<i class="fa fa-copyright fa-fw"></i> INTRCT 2017
 		</div>
 	</md-sidenav>
-	<div class="my-content"></div>
+	<div class="my-content">
+		<i class="fa fa-bars" (click)="openSidebar(sidebar)"></i>
+	</div>
 </md-sidenav-container>
 <router-outlet></router-outlet>
