@@ -45,6 +45,7 @@ body,
 material-app,
 md-sidenav-container,
 .content {
+	font-family: 'Montserrat', sans-serif;
 	@include fullscreen-background-cover('/assets/home.jpg');
 	// background-color: grey;
 	margin: 0;
@@ -62,7 +63,6 @@ md-sidenav {
 	width: $sidebar-width;
 	padding-right: $right-offset;
 	color: white !important;
-	font-family: 'Montserrat', sans-serif;
 
 	.logo {
 		background: url('/assets/Logo_white.svg');
