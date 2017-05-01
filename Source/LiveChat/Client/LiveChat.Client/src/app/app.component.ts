@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
 	styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-	isMobile: boolean = window.matchMedia("only screen and (max-width: 760px)").matches;
+	isMobile: boolean = window.matchMedia('only screen and (max-width: 769px)').matches;
 	opened: boolean = !this.isMobile;
 	mode: string = this.isMobile ? 'over' : 'side';
 
