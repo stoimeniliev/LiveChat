@@ -6,8 +6,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {
 	MdSidenavModule,
-	MdButtonModule
+	MdButtonModule,
+	MdInputModule
 } from '@angular/material';
+
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -23,6 +26,8 @@ import 'hammerjs';
 		BrowserAnimationsModule,
 		MdSidenavModule,
 		MdButtonModule,
+		MdInputModule,
+		FlexLayoutModule,
 		AppRoutingModule
 	],
 	providers: [],
