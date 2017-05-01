@@ -26,6 +26,12 @@
 	background-size: cover;
 }
 
+@mixin transform-translate($left, $top){
+	-webkit-transform: translate($left, $top);
+	-ms-transform: translate($left, $top);
+	transform: translate($left, $top);
+}
+
 $right-offset: 37px;
 $sidebar-width: 215px;
 $logo-size: (width: 100px, height:35px);
@@ -105,20 +111,26 @@ md-sidenav {
 .content {
 	@include fullscreen-background-cover('/assets/home.jpg');
 
+	position: relative;
+
 	.menu {
 		color: white;
 		padding-top: 10px;
 		padding-left: 10px;
 	}
 
-	md-input-container {
-
-		span {
-			left: 0;
-		}
-	}
-
 	.event-selector {
 		color: white;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		@include transform-translate(-50%, -50%);
+
+		.title {
+			text-align: center !important;
+			font-size: large;
+			font-weight: lighter;
+		}
+		// transform: translate(-50%, -50%);
 	}
 }
