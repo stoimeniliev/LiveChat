@@ -8,28 +8,28 @@
 @include mat-core;
 
 // Define the default theme (same as the example above).
-$intrct-primary: mat-palette($mat-purple);
+$intrct-primary: mat-palette($mat-deep-purple);
 $intrct-accent: mat-palette($mat-deep-orange);
 $intrct-theme: mat-light-theme($intrct-primary, $intrct-accent);
 
 // Include the default theme styles.
 @include angular-material-theme($intrct-theme);
 
-// Define an alternate dark theme.
-$intrct-dark-primary: mat-palette($mat-deep-purple);
-$intrct-dark-accent: mat-palette($mat-deep-orange);
-$intrct-dark-theme: mat-dark-theme($intrct-dark-primary, $intrct-dark-accent);
+// Define an alternate lighter theme.
+$intrct-light-primary: mat-palette($mat-deep-purple, 100);
+$intrct-light-accent: mat-palette($mat-deep-orange);
+$intrct-light-theme: mat-dark-theme($intrct-light-primary, $intrct-light-accent);
 
-.intrct-dark {
-	@include angular-material-theme($intrct-dark-theme);
+.intrct-light {
+	@include angular-material-theme($intrct-light-theme);
 }
 
-@mixin intrct-dark-background($theme) {
+@mixin intrct-primary-background($theme) {
 	// Extract whichever individual palettes you need from the theme.
 	$primary: map-get($theme, primary);
 
 	// Use mat-color to extract individual colors from a palette as necessary.
-	.dark-background {
+	.primary-background {
 		background-color: mat-color($primary);
 	}
 }
