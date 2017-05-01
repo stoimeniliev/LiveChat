@@ -4,7 +4,7 @@
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
-@include intrct-dark-background($intrct-dark-theme);
+@include intrct-primary-background($intrct-theme);
 
 @mixin logo-dimensions($width, $height) {
 	width: $width;
@@ -42,21 +42,13 @@ $trademark-bottom-offset: 0px;
 
 html,
 body,
-material-app,
 md-sidenav-container,
 .content {
 	font-family: 'Montserrat', sans-serif;
-	@include fullscreen-background-cover('/assets/home.jpg');
-	// background-color: grey;
 	margin: 0;
 	width: 100%;
 	height: 100%;
 
-	.menu {
-		color: white;
-		padding-top: 10px;
-		padding-left: 10px;
-	}
 }
 
 md-sidenav {
@@ -107,5 +99,26 @@ md-sidenav {
 		padding-bottom: $trademark-bottom-offset;
 		font-size: $trademark-font-size;
 		line-height: 0px;
+	}
+}
+
+.content {
+	@include fullscreen-background-cover('/assets/home.jpg');
+
+	.menu {
+		color: white;
+		padding-top: 10px;
+		padding-left: 10px;
+	}
+
+	md-input-container {
+
+		span {
+			left: 0;
+		}
+	}
+
+	.event-selector {
+		color: white;
 	}
 }

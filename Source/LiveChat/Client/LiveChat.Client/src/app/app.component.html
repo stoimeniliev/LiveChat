@@ -1,7 +1,7 @@
 <md-sidenav-container>
 	<md-sidenav [mode]="mode"
 					[opened]="opened"
-					class="dark-background"
+					class="primary-background"
 					#sidebar>
 		<a class="logo">
 		</a>
@@ -52,6 +52,16 @@
 		<i class="fa fa-bars menu"
 						*ngIf="isMobile"
 						(click)="openSidebar(sidebar)"></i>
+		<div class="event-selector">
+			<md-input-container color="primary"
+							class="intrct-light">
+				<i mdSuffix
+								class="fa fa-search"></i>
+				<input mdInput
+								placeholder="Enter event code here"
+								type="text" />
+			</md-input-container>
+		</div>
 	</div>
 </md-sidenav-container>
 <router-outlet></router-outlet>
