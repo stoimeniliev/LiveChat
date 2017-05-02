@@ -3,6 +3,7 @@
 @import '../assets/reset.scss';
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300,400');
 
 @include intrct-primary-background($intrct-theme);
 
@@ -26,11 +27,13 @@
 	background-size: cover;
 }
 
-@mixin transform-translate($left, $top){
+@mixin transform-translate($left : 0%, $top : 0%){
 	-webkit-transform: translate($left, $top);
 	-ms-transform: translate($left, $top);
 	transform: translate($left, $top);
 }
+
+$xs: 599px;
 
 $right-offset: 37px;
 $sidebar-width: 215px;
@@ -111,7 +114,7 @@ md-sidenav {
 .content {
 	@include fullscreen-background-cover('/assets/home.jpg');
 
-	position: relative;
+	// position: relative;
 
 	.menu {
 		color: white;
@@ -122,15 +125,31 @@ md-sidenav {
 	.event-selector {
 		color: white;
 		position: absolute;
+		width: 60%;
 		top: 50%;
 		left: 50%;
 		@include transform-translate(-50%, -50%);
 
 		.title {
+			font-family: 'Ubuntu', sans-serif;
 			text-align: center !important;
-			font-size: large;
-			font-weight: lighter;
+			font-size: 34px;
+			font-weight: 100;
 		}
-		// transform: translate(-50%, -50%);
+
+		@media screen and (max-width: $xs) {
+			.title {
+				width: 100%;
+				font-size: 25px;
+			}
+		}
+
+		md-input-container {
+			// max-width: 420px;
+			// position: absolute;
+			// top: 50%;
+			left: 50%;
+			@include transform-translate(-50%);
+		}
 	}
 }

@@ -52,18 +52,23 @@
 		<i class="fa fa-bars menu"
 						*ngIf="isMobile"
 						(click)="openSidebar(sidebar)"></i>
-		<div class="event-selector">
-			<span class="title">
+		<div class="event-selector"
+						fxLayout="column">
+			<div class="title"
+							fxLayoutGap="300px"
+							fxFlex="100">
 				INTRCT Audience Engagement and Interaction Software
-			</span>
-			<md-input-container color="primary"
-							class="intrct-light">
-				<i mdSuffix
-								class="fa fa-search"></i>
-				<input mdInput
-								placeholder="Enter event code here"
-								type="text" />
-			</md-input-container>
+			</div>
+			<div fxFlex="100">
+				<md-input-container color="primary"
+								class="intrct-light">
+					<i mdSuffix
+									class="fa fa-search"></i>
+					<input mdInput
+									placeholder="Enter event code here"
+									type="text" />
+				</md-input-container>
+			</div>
 		</div>
 	</div>
 </md-sidenav-container>
