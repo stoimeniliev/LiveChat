@@ -125,8 +125,10 @@ md-sidenav {
 	.event-selector {
 		color: white;
 		position: absolute;
-		width: 60%;
-		top: 50%;
+		width: 66%;
+		padding-left: 20px;
+		padding-right: 20px;
+		top: 40%;
 		left: 50%;
 		@include transform-translate(-50%, -50%);
 
@@ -135,21 +137,26 @@ md-sidenav {
 			text-align: center !important;
 			font-size: 34px;
 			font-weight: 100;
-		}
-
-		@media screen and (max-width: $xs) {
-			.title {
-				width: 100%;
-				font-size: 25px;
-			}
+			letter-spacing: 3px;
+			line-height: 58px;
 		}
 
 		md-input-container {
-			// max-width: 420px;
-			// position: absolute;
-			// top: 50%;
 			left: 50%;
+			font-size: 16px;
 			@include transform-translate(-50%);
+		}
+	}
+
+	@media screen and (max-width: $xs) {
+		.event-selector {
+			width: 100%;
+		}
+		.title {
+			width: 100%;
+			font-size: 25px !important;
+			// letter-spacing: normal;
+			line-height: 30px !important;
 		}
 	}
 }
