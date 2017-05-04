@@ -4,33 +4,49 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import 'hammerjs';
+
 import {
 	MdSidenavModule,
 	MdButtonModule,
-	MdInputModule
+	MdInputModule,
+	MdDialogModule
 } from '@angular/material';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
-import 'hammerjs';
+import { SubscribtionDialogComponent } from './subscribtion-dialog/subscribtion-dialog.component';
 
 @NgModule({
-	declarations: [AppComponent],
+	declarations: [
+		AppComponent,
+		SubscribtionDialogComponent
+	],
+
 	imports: [
 		BrowserModule,
 		FormsModule,
 		HttpModule,
 		BrowserAnimationsModule,
+
 		MdSidenavModule,
 		MdButtonModule,
 		MdInputModule,
+		MdDialogModule,
 		FlexLayoutModule,
+
 		AppRoutingModule
 	],
 	providers: [],
-	bootstrap: [AppComponent]
+
+	entryComponents: [
+		SubscribtionDialogComponent
+	],
+
+	bootstrap: [
+		AppComponent
+	]
 })
 export class AppModule { }

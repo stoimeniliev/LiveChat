@@ -1,4 +1,9 @@
 import { Component } from '@angular/core';
+import { MdDialog } from '@angular/material';
+
+import {
+	SubscribtionDialogComponent
+} from './subscribtion-dialog/subscribtion-dialog.component';
 
 @Component({
 	selector: 'intrct-root',
@@ -10,9 +15,13 @@ export class AppComponent {
 	opened: boolean = !this.isMobile;
 	mode: string = this.isMobile ? 'over' : 'side';
 
-	constructor() { }
+	constructor(public dialog: MdDialog) { }
 
 	openSidebar(sidebar) {
 		sidebar.open();
+	}
+
+	openDialog() {
+		this.dialog.open(SubscribtionDialogComponent);
 	}
 }
