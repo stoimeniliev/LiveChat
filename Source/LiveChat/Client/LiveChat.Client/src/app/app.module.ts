@@ -20,12 +20,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { SubscribtionDialogComponent } from './subscribtion-dialog/subscribtion-dialog.component';
+import { ProjectorComponent } from './projector/projector.component';
 
 @NgModule({
 	declarations: [
 		AppComponent,
 		HomeComponent,
-		SubscribtionDialogComponent
+		SubscribtionDialogComponent,
+		ProjectorComponent
 	],
 
 	imports: [
