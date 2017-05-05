@@ -1,0 +1,14 @@
+.test {
+	height: 100%;
+	width: 500px;
+	overflow: scroll;
+	background-color: red;
+	position: fixed;
+}
+
+.content {
+	height: 200px;
+	width: 100%;
+	background-color: blue;
+	margin: 20px 0px;
+}
