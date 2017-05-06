@@ -21,13 +21,15 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { SubscribtionDialogComponent } from './subscribtion-dialog/subscribtion-dialog.component';
 import { ProjectorComponent } from './projector/projector.component';
+import { MessageComponent } from './message/message.component';
 
 @NgModule({
 	declarations: [
 		AppComponent,
 		HomeComponent,
 		SubscribtionDialogComponent,
-		ProjectorComponent
+		ProjectorComponent,
+		MessageComponent
 	],
 
 	imports: [
