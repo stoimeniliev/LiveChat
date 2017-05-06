@@ -1,22 +1,26 @@
+$icon-size: 60px;
+$icon-text-size: $icon-size - 30px;
+
 .message {
-	&:after {
-		content:"\000A";
-		white-space: pre;
-	}
 
 	.icon {
+		display: inline-block;
 		border-radius: 50%;
 
-		width: 85px;
-		height: 85px;
-		line-height: 85px;
+		width: $icon-size;
+		height: $icon-size;
+		line-height: $icon-size;
 		text-align: center;
 
 		background: cyan;
 		color: white;
 		font-weight: bolder;
-		font-size: 38px;
+		font-size: $icon-text-size;
 		text-align: center;
+	}
+
+	.content {
+		display: inline-block;
 	}
 
 	background-color: white;
