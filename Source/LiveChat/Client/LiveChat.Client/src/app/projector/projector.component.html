@@ -1,23 +1,10 @@
 <div class="test">
-	<div class="content">
-		
-	</div>
-	<div class="content">
-		
-	</div>
-	<div class="content">
-		
-	</div>
-	<div class="content">
-		
-	</div>
-	<div class="content">
-		
-	</div>
-	<div class="content">
-		
-	</div>
-	<div class="content">
-		
+	<intrct-message></intrct-message>
+	<button md-fab md-button
+					class="button"
+					color="primary">S</button>
+	<div *ngFor="let item of [1,2,3,4,5]"
+					class="content">
+		{{ item }}
 	</div>
 </div>
