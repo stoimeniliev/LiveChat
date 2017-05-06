@@ -1,10 +1,21 @@
 $icon-size: 60px;
 $icon-text-size: $icon-size - 30px;
 
+@mixin triangle($size, $color) {
+	content: ' ';
+	width: 0;
+	height: 0;
+	border-top: $size solid $color;
+	border-left: $size solid transparent;
+}
+
 .message {
+	background-color: white;
+	overflow: hidden;
 
 	.icon {
-		display: inline-block;
+		float: left;
+		// display: inline-block;
 		border-radius: 50%;
 
 		width: $icon-size;
@@ -19,9 +30,21 @@ $icon-text-size: $icon-size - 30px;
 		text-align: center;
 	}
 
-	.content {
-		display: inline-block;
+	.arrow {
+		@include triangle(10px, grey);
+		float: left;
+		margin-top: 3px;
+		// box-shadow: 2px 2px 10px 0px rgba(50, 50, 50, 0.3);
 	}
 
-	background-color: white;
+	.content {
+		margin-left: 10px;
+		padding: 20px 25px;
+		float: left;
+		font-size: 20px;
+		min-height: 50px;
+		width: 80%;
+		border-radius: 0 2px 2px 2px;
+		box-shadow: 2px 2px 10px 0px rgba(50, 50, 50, 0.3);
+	}
 }
