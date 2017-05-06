@@ -1,10 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
-html,
-body,
-material-app,
-md-sidenav-container,
-.my-content {
+@import './assets/reset.scss';
+
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,700');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100');
+
+html, body {
+	font-family: 'Ubuntu', sans-serif;
+	box-sizing: border-box;
 	margin: 0;
 	width: 100%;
 	height: 100%;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
 }
