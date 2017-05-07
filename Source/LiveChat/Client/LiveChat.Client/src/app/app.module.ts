@@ -11,7 +11,8 @@ import {
 	MdButtonModule,
 	MdInputModule,
 	MdDialogModule,
-	MdCardModule
+	MdCardModule,
+	MdTabsModule
 } from '@angular/material';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -44,6 +45,7 @@ import { MessageComponent } from './message/message.component';
 		MdInputModule,
 		MdDialogModule,
 		MdCardModule,
+		MdTabsModule,
 		FlexLayoutModule,
 
 		AppRoutingModule
