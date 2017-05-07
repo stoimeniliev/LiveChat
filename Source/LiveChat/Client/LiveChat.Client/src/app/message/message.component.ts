@@ -1,15 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'intrct-message',
-  templateUrl: './message.component.html',
-  styleUrls: ['./message.component.scss']
+	selector: 'intrct-message',
+	templateUrl: './message.component.html',
+	styleUrls: ['./message.component.scss']
 })
 export class MessageComponent implements OnInit {
+	@Input() author: string;
+	@Input() content: string;
 
-  constructor() { }
+	constructor() { }
 
-  ngOnInit() {
-  }
+	ngOnInit() {
+	}
 
 }
