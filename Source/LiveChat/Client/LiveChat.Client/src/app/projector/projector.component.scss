@@ -1,7 +1,45 @@
-.test {
-	height: 100%;
-	width: 500px;
-	overflow-y: scroll;
+$global-padding: 0 25px;
+
+.main {
+	width: 900px;
+	overflow-y: hidden;
 	position: fixed;
-	padding: 5px;
+	margin-left: 130px;
+
+	.title-bar {
+		background-color: #fcf;
+		padding: $global-padding;
+		height: 130px;
+
+		font: 0/0 a;
+
+		// http://stackoverflow.com/questions/18516317/vertically-align-an-image-inside-a-div-with-responsive-height
+		&:before {
+			content: ' ';
+			display: inline-block;
+			vertical-align: middle;
+			height: 100%;
+		}
+
+		.logo {
+			img {
+				// http://stackoverflow.com/a/17183996
+				display: block;
+				max-width: 300px;
+				max-height: 60px;
+				width: auto;
+				height: auto;
+			}
+
+			display: inline-block;
+			vertical-align: middle;
+		}
+	}
+
+	.messages {
+		background-color: #ffc;
+		height: 100%;
+		padding: $global-padding;
+		overflow-y: scroll;
+	}
 }
