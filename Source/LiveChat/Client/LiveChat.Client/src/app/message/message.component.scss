@@ -12,7 +12,6 @@ $icon-color: purple;
 
 .message {
 	overflow: hidden;
-	padding: 10px 0;
 
 	.icon {
 		float: left;
@@ -30,7 +29,11 @@ $icon-color: purple;
 		text-align: center;
 	}
 
-	.content {
+	.content-wrapper {
 		margin-left: $icon-size + 10px;
+		padding-top: 1px;
+		padding-right: 1px;
+		padding-bottom: 1px;
 	}
+
 }

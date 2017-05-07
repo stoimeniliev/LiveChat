@@ -2,7 +2,7 @@
 	<div class="main">
 		<div class="title-bar">
 			<div class="logo">
-				<img src="http://placehold.it/280x55" />
+				<img src="../../assets/ted-logo.png" />
 			</div>
 			<div class="message-order">
 				<md-tab-group>
@@ -12,21 +12,11 @@
 			</div>
 		</div>
 		<div class="messages">
-			<intrct-message [author]="'Valentina'">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent malesuada porta mi quis bibendum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec molestie, eros eget.
-			</intrct-message>
-			<intrct-message [author]="'Valentina'">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent malesuada porta mi quis bibendum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec molestie, eros eget.
-			</intrct-message>
-			<intrct-message [author]="'Valentina'">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent malesuada porta mi quis bibendum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec molestie, eros eget.
-			</intrct-message>
-			<intrct-message [author]="'Valentina'">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent malesuada porta mi quis bibendum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec molestie, eros eget.
-			</intrct-message>
-			<intrct-message [author]="'Valentina'">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent malesuada porta mi quis bibendum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec molestie, eros eget.
-			</intrct-message>
+			<div class="message" *ngFor="let i of [1,2,3,4,5,6]">
+				<intrct-message [author]="'Valentina'">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent malesuada porta mi quis bibendum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec molestie, eros eget.
+				</intrct-message>
+			</div>
 		</div>
 	</div>
 </div>
