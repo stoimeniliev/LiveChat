@@ -1,6 +1,11 @@
 <div class="message">
 	<span class="icon">{{ author[0].toUpperCase() }}</span>
 	<div class="content-wrapper">
-		<md-card class="content"><ng-content></ng-content></md-card>
+		<md-card>
+			<md-card-subtitle>{{ author }}</md-card-subtitle>
+			<md-card-content>
+				<ng-content></ng-content>
+			</md-card-content>
+		</md-card>
 	</div>
 </div>
