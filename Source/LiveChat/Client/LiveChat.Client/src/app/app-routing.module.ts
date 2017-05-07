@@ -13,10 +13,6 @@ const routes: Routes = [
 	{
 		path: 'projector',
 		component: ProjectorComponent
-	},
-	{
-		path: 'message',
-		component: MessageComponent
 	}
 ];
 
