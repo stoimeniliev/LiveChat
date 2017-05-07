@@ -90,7 +90,9 @@ $title-bar-height: 130px;
 
 		.message {
 			margin-bottom: 40px;
-			font-size: 20px;
+			.message-content {
+				font-size: 20px;
+			}
 		}
 	}
 }
