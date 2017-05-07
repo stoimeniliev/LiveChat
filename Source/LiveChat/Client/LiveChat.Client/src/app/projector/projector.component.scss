@@ -1,7 +1,15 @@
 $global-padding: 0 25px;
 
+@mixin height-calc($value) {
+	height: -webkit-calc(#{$value});
+	height: -moz-calc(#{$value});
+	height: calc(#{$value});
+
+}
+
 .main {
 	width: 900px;
+	height: 100%;
 	overflow-y: hidden;
 	position: fixed;
 	margin-left: 130px;
@@ -10,7 +18,6 @@ $global-padding: 0 25px;
 		background-color: #fcf;
 		padding: $global-padding;
 		height: 130px;
-
 		font: 0/0 a;
 
 		// http://stackoverflow.com/questions/18516317/vertically-align-an-image-inside-a-div-with-responsive-height
@@ -34,11 +41,17 @@ $global-padding: 0 25px;
 			display: inline-block;
 			vertical-align: middle;
 		}
+
+		.message-order {
+			// display: inline-block;
+			// vertical-align: middle;
+			float: right;
+		}
 	}
 
 	.messages {
 		background-color: #ffc;
-		height: 100%;
+		@include height-calc("100% - 130px");
 		padding: $global-padding;
 		overflow-y: scroll;
 	}
