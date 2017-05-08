@@ -1,7 +1,7 @@
 $global-padding-sides: 25px;
 $main-content-width: 900px;
 $left-ad-width: 130px;
-$right-ad-width: 290px;
+$right-ad-width: 350px;
 $title-bar-height: 130px;
 $max-logo-height: 60px;
 $max-logo-width: 300px;
@@ -104,6 +104,7 @@ $title-shadow-size: 0px;
 
 		.message {
 			margin-bottom: 40px;
+			line-height: $messages-font-size + 5px;
 			.message-content {
 				font-size: $messages-font-size;
 			}
