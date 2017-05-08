@@ -94,7 +94,7 @@ $title-shadow-size: 0px;
 
 	.messages {
 		background-color: rgb(250, 250, 250);
-		@include calc("height", "100% - " + ($title-bar-height + $title-shadow-size));
+		@include calc('height', '100% - ' + ($title-bar-height + $title-shadow-size));
 		padding-top: 50px;
 		padding-left: $global-padding-sides;
 		padding-right: $global-padding-sides;
