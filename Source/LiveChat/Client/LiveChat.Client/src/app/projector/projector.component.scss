@@ -5,7 +5,7 @@ $title-bar-height: 130px;
 $max-logo-height: 60px;
 $max-logo-width: 300px;
 $messages-font-size: 20px;
-$title-shadow-size: 10px;
+$title-shadow-size: 0px;
 
 @mixin height-calc($value) {
 	height: -webkit-calc(#{$value});
@@ -29,9 +29,13 @@ $title-shadow-size: 10px;
 }
 
 @mixin boxshadow() {
-	-webkit-box-shadow: 0px $title-shadow-size/2 10px 0px rgba(0,0,0,0.5);
-	-moz-box-shadow: 0px $title-shadow-size/2 10px 0px rgba(0,0,0,0.5);
-	box-shadow: 0px $title-shadow-size/2 10px 0px rgba(0,0,0,0.5);
+	// -webkit-box-shadow: 0px $title-shadow-size/2 10px 0px rgba(0,0,0,0.5);
+	// -moz-box-shadow: 0px $title-shadow-size/2 10px 0px rgba(0,0,0,0.5);
+	// box-shadow: 0px $title-shadow-size/2 10px 0px rgba(0,0,0,0.5);
+
+	-webkit-box-shadow: inset 1px 4px 9px -6px;
+	-moz-box-shadow:: inset 1px 4px 9px -6px;
+	box-shadow: inset 1px 4px 9px -6px;
 }
 
 .main-container {
@@ -55,7 +59,7 @@ $title-shadow-size: 10px;
 		height: $title-bar-height;
 		font: 0/0 a;
 		margin-bottom: $title-shadow-size;
-		@include boxshadow();
+		// @include boxshadow();
 
 		// http://stackoverflow.com/questions/18516317/vertically-align-an-image-inside-a-div-with-responsive-height
 		&:before {
@@ -94,6 +98,8 @@ $title-shadow-size: 10px;
 		padding-left: $global-padding-sides;
 		padding-right: $global-padding-sides;
 		overflow-y: scroll;
+		@include boxshadow();
+		// box-shadow: inset 1px 4px 9px -6px;
 
 		.message {
 			margin-bottom: 40px;
