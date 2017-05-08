@@ -1,17 +1,17 @@
 $global-padding-sides: 25px;
 $main-content-width: 900px;
 $left-ad-width: 130px;
+$right-ad-width: 290px;
 $title-bar-height: 130px;
 $max-logo-height: 60px;
 $max-logo-width: 300px;
 $messages-font-size: 20px;
 $title-shadow-size: 0px;
 
-@mixin height-calc($value) {
-	height: -webkit-calc(#{$value});
-	height: -moz-calc(#{$value});
-	height: calc(#{$value});
-
+@mixin calc($key, $value) {
+	#{$key}: -webkit-calc(#{$value});
+	#{$key}: -moz-calc(#{$value});
+	#{$key}: calc(#{$value});
 }
 
 @mixin transform-translateY($top : 0%){
@@ -47,7 +47,8 @@ $title-shadow-size: 0px;
 
 .main {
 	position: relative;
-	width: $main-content-width;
+	// width: $main-content-width;
+	@include calc('width', '100% - ' + ($left-ad-width + $right-ad-width));
 	height: 100%;
 	background-color: white;
 	overflow-y: hidden;
@@ -93,7 +94,7 @@ $title-shadow-size: 0px;
 
 	.messages {
 		background-color: rgb(250, 250, 250);
-		@include height-calc("100% - " + ($title-bar-height + $title-shadow-size));
+		@include calc("height", "100% - " + ($title-bar-height + $title-shadow-size));
 		padding-top: 50px;
 		padding-left: $global-padding-sides;
 		padding-right: $global-padding-sides;
