@@ -1,3 +1,15 @@
-<p>
-  mobile-view works!
-</p>
+<div class="title-bar">
+	<i class="fa fa-bars"></i>
+</div>
+<div class="messages">
+	<div class="message"
+		*ngFor="let i of [1,2,3,4,5,6]">
+		<intrct-message [author]="'Valentina'">
+			<span class="message-content">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent malesuada porta mi quis bibendum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec molestie, eros eget.
+			</span>
+		</intrct-message>
+	</div>
+</div>
+<input type="text"
+				class="new-message">
