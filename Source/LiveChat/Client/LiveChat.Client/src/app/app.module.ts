@@ -24,6 +24,7 @@ import { HomeComponent } from './home/home.component';
 import { SubscribtionDialogComponent } from './subscribtion-dialog/subscribtion-dialog.component';
 import { ProjectorComponent } from './projector/projector.component';
 import { MessageComponent } from './message/message.component';
+import { MobileViewComponent } from './mobile-view/mobile-view.component';
 
 @NgModule({
 	declarations: [
@@ -31,7 +32,8 @@ import { MessageComponent } from './message/message.component';
 		HomeComponent,
 		SubscribtionDialogComponent,
 		ProjectorComponent,
-		MessageComponent
+		MessageComponent,
+		MobileViewComponent
 	],
 
 	imports: [
