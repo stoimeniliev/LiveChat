@@ -2,6 +2,8 @@ $global-padding-sides: 35px;
 $title-bar-height: 110px;
 $padding-sides: 30px;
 $new-message-height: 30px;
+$max-logo-width: 220px;
+$max-logo-height: 40px;
 
 @mixin calc($key, $value) {
 	#{$key}: -webkit-calc(#{$value});
@@ -29,13 +31,35 @@ $new-message-height: 30px;
 		height: $title-bar-height;
 		// font: 0/0 a;
 		font-size: 35px;
+		margin-left: -10px;
 
 		// http://stackoverflow.com/questions/18516317/vertically-align-an-image-inside-a-div-with-responsive-height
 		&:before {
-			content: ' ';
+			content: '';
 			display: inline-block;
 			vertical-align: middle;
 			height: 100%;
+		}
+
+		.menu {
+			color: rgb(117,117,117);
+			margin: 0;
+			padding: 0;
+		}
+
+		.logo {
+			img {
+				// http://stackoverflow.com/a/17183996
+				display: block;
+				max-width: $max-logo-width;
+				max-height: $max-logo-height;
+				width: auto;
+				height: auto;
+			}
+
+			display: inline-block;
+			vertical-align: middle;
+			margin-left: 30px;
 		}
 	}
 
@@ -45,12 +69,35 @@ $new-message-height: 30px;
 		top: 0;
 		overflow-y: scroll;
 		height: 100%;
-		padding: 0 $global-padding-sides;
+		padding: 20px $global-padding-sides;
 		@include boxshadow();
 		@include calc('height', '100% - ' + ($title-bar-height + $new-message-height));
 
 		.message {
 			margin-bottom: 50px;
+		}
+
+		.footer {
+			width: 50%;
+			text-align: center;
+			margin: 0 auto;
+
+			&:before {
+				content: '';
+				display: inline-block;
+				vertical-align: middle;
+				height: 100%;
+			}
+
+			img {
+				display: inline-block;
+				width: 100px;
+				vertical-align: middle;
+				margin-left: 20px;
+			}
+
+			vertical-align: middle;
+			// margin-bottom: 50px;
 		}
 	}
 
