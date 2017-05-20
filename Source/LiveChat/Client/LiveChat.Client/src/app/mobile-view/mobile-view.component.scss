@@ -1,4 +1,4 @@
-$global-padding-sides: 0px;
+$global-padding-sides: 35px;
 $title-bar-height: 110px;
 $padding-sides: 30px;
 $new-message-height: 30px;
@@ -9,44 +9,57 @@ $new-message-height: 30px;
 	#{$key}: calc(#{$value});
 }
 
+@mixin boxshadow() {
+	-webkit-box-shadow: inset 1px 4px 9px -6px;
+	-moz-box-shadow:: inset 1px 4px 9px -6px;
+	box-shadow: inset 1px 4px 9px -6px;
+}
+
 .main-container {
 	position: absolute;
 	width: 100%;
 	height: 100%;
-}
 
-.title-bar {
-	position: fixed;
-	top: 0;
-	width: 100%;
-	background-color: red;
-	padding: 0 $global-padding-sides;
-	height: $title-bar-height;
-	// font: 0/0 a;
-	font-size: 35px;
-	// @include boxshadow();
+	.title-bar {
+		position: relative;
+		top: 0;
+		width: 100%;
+		background-color: white;
+		padding: 0 $global-padding-sides;
+		height: $title-bar-height;
+		// font: 0/0 a;
+		font-size: 35px;
 
-	// http://stackoverflow.com/questions/18516317/vertically-align-an-image-inside-a-div-with-responsive-height
-	&:before {
-		content: ' ';
-		display: inline-block;
-		vertical-align: middle;
-		height: 100%;
+		// http://stackoverflow.com/questions/18516317/vertically-align-an-image-inside-a-div-with-responsive-height
+		&:before {
+			content: ' ';
+			display: inline-block;
+			vertical-align: middle;
+			height: 100%;
+		}
 	}
-}
 
-.messages {
-	position: fixed;
-	top: $title-bar-height;
-	overflow-y: scroll;
-	height: 100%;
-	@include calc('height', '100% - ' + ($title-bar-height + $new-message-height));
-}
+	.messages {
+		background-color: rgb(250, 250, 250);
+		position: relative;
+		top: 0;
+		overflow-y: scroll;
+		height: 100%;
+		padding: 0 $global-padding-sides;
+		@include boxshadow();
+		@include calc('height', '100% - ' + ($title-bar-height + $new-message-height));
 
-.new-message {
-	position: fixed;
-	bottom: 0;
-	width: 100%;
-	height: $new-message-height;
-	font-size: $new-message-height;
+		.message {
+			margin-bottom: 50px;
+		}
+	}
+
+	.new-message {
+		position: relative;
+		bottom: 0;
+		border: 1px solid black;
+		width: 100%;
+		height: $new-message-height;
+		font-size: $new-message-height;
+	}
 }
