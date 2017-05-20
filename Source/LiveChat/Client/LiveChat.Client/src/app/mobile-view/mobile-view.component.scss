@@ -1,9 +1,21 @@
 $global-padding-sides: 35px;
+
 $title-bar-height: 110px;
-$padding-sides: 30px;
-$new-message-height: 30px;
 $max-logo-width: 220px;
 $max-logo-height: 40px;
+$title-bar-font-size: 35px;
+$logo-left-margin: 30px;
+
+$messages-vertical-padding: 20px;
+$message-margin-bottom: 50px;
+$footer-logo-width: 100px;
+$footer-logo-margin-left: 20px;
+
+$new-message-height: 50px;
+
+@function toMobile($unit) {
+	@return $unit/2;
+}
 
 @mixin calc($key, $value) {
 	#{$key}: -webkit-calc(#{$value});
@@ -18,7 +30,7 @@ $max-logo-height: 40px;
 }
 
 .main-container {
-	position: absolute;
+	position: fixed;
 	width: 100%;
 	height: 100%;
 
@@ -27,11 +39,12 @@ $max-logo-height: 40px;
 		top: 0;
 		width: 100%;
 		background-color: white;
-		padding: 0 $global-padding-sides;
-		height: $title-bar-height;
+		padding: 0 toMobile($global-padding-sides);
+		// padding: 0 $global-padding-sides;
+		height: toMobile($title-bar-height);
 		// font: 0/0 a;
-		font-size: 35px;
-		margin-left: -10px;
+		font-size: toMobile($title-bar-font-size);
+		// margin-left: -10px;
 
 		// http://stackoverflow.com/questions/18516317/vertically-align-an-image-inside-a-div-with-responsive-height
 		&:before {
@@ -51,15 +64,15 @@ $max-logo-height: 40px;
 			img {
 				// http://stackoverflow.com/a/17183996
 				display: block;
-				max-width: $max-logo-width;
-				max-height: $max-logo-height;
+				max-width: toMobile($max-logo-width);
+				max-height: toMobile($max-logo-height);
 				width: auto;
 				height: auto;
 			}
 
 			display: inline-block;
 			vertical-align: middle;
-			margin-left: 30px;
+			margin-left: toMobile($logo-left-margin);
 		}
 	}
 
@@ -68,13 +81,19 @@ $max-logo-height: 40px;
 		position: relative;
 		top: 0;
 		overflow-y: scroll;
+		// Fix scrolling issue for iOS
+		-webkit-overflow-scrolling: touch;
 		height: 100%;
-		padding: 20px $global-padding-sides;
+		padding: toMobile($messages-vertical-padding) toMobile($global-padding-sides);
 		@include boxshadow();
-		@include calc('height', '100% - ' + ($title-bar-height + $new-message-height));
+		@include calc('height', '100% - ' + (toMobile($title-bar-height) + toMobile($new-message-height)));
 
 		.message {
-			margin-bottom: 50px;
+			margin-bottom: toMobile($message-margin-bottom);
+
+			.message-content {
+				// font-size: 30px;
+			}
 		}
 
 		.footer {
@@ -91,9 +110,9 @@ $max-logo-height: 40px;
 
 			img {
 				display: inline-block;
-				width: 100px;
+				width: toMobile($footer-logo-width);
 				vertical-align: middle;
-				margin-left: 20px;
+				margin-left: toMobile($footer-logo-margin-left);
 			}
 
 			vertical-align: middle;
@@ -106,7 +125,7 @@ $max-logo-height: 40px;
 		bottom: 0;
 		border: 1px solid black;
 		width: 100%;
-		height: $new-message-height;
-		font-size: $new-message-height;
+		height: toMobile($new-message-height);
+		font-size: toMobile($new-message-height);
 	}
 }
