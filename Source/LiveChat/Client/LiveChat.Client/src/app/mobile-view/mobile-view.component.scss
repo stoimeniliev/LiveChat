@@ -122,10 +122,11 @@ $new-message-height: 50px;
 
 	.new-message {
 		position: relative;
-		bottom: 0;
-		border: 1px solid black;
+		top: 0;
+		border-top: 1px solid rgb(117,117,117);
 		width: 100%;
 		height: toMobile($new-message-height);
-		font-size: toMobile($new-message-height);
+		padding: toMobile(($new-message-height / 2));
+		font-size: toMobile(($new-message-height / 2));
 	}
 }
