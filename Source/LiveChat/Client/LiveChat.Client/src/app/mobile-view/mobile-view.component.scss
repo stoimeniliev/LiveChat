@@ -11,7 +11,7 @@ $message-margin-bottom: 50px;
 $footer-logo-width: 100px;
 $footer-logo-margin-left: 20px;
 
-$new-message-height: 50px;
+$new-message-height: 70px;
 
 @function toMobile($unit) {
 	@return $unit/2;
@@ -123,6 +123,7 @@ $new-message-height: 50px;
 	.new-message {
 		position: relative;
 		top: 0;
+		border-width: 0;
 		border-top: 1px solid rgb(117,117,117);
 		width: 100%;
 		height: toMobile($new-message-height);
