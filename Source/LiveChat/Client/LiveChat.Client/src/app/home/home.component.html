@@ -1,8 +1,8 @@
 <md-sidenav-container>
 	<md-sidenav [mode]="mode"
-					[opened]="opened"
-					class="primary-background"
-					#sidebar>
+	    [opened]="opened"
+	    class="primary-background"
+	    #sidebar>
 		<a class="logo">
 		</a>
 		<div class="menu">
@@ -50,24 +50,24 @@
 	</md-sidenav>
 	<div class="content">
 		<i class="fa fa-bars menu"
-						*ngIf="isMobile"
-						(click)="openSidebar(sidebar)"></i>
+		    *ngIf="isMobile"
+		    (click)="openSidebar(sidebar)"></i>
 		<div class="event-selector"
-						fxLayoutGap="50px"
-						fxLayoutGap.xs="20px"
-						fxLayout="column">
+		    fxLayoutGap="50px"
+		    fxLayoutGap.xs="20px"
+		    fxLayout="column">
 			<div class="title"
-							fxFlex="100">
+			    fxFlex="100">
 				INTRCT Audience Engagement and Interaction Software
 			</div>
 			<div fxFlex="100">
 				<md-input-container color="primary"
-								class="intrct-light">
+				    class="intrct-light">
 					<i mdSuffix
-									class="fa fa-search"></i>
+					    class="fa fa-search"></i>
 					<input mdInput
-									placeholder="Enter event code here"
-									type="text" />
+					    placeholder="Enter event code here"
+					    type="text" />
 				</md-input-container>
 			</div>
 		</div>
